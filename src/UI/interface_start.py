@@ -9,6 +9,6 @@ from src.UI.button_quit import ButtonQuit
 class START(Interface):
     def __init__(self):
         super().__init__(ImageStart((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2)),
-                         ButtonPlay((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2)),
-                         ButtonOption((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2 + 70)),
-                         ButtonQuit((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2 + 70 * 2)))
+                         ButtonPlay((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2 - 30)),
+                         ButtonOption((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2 + 60)),
+                         ButtonQuit((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2 + 150)))

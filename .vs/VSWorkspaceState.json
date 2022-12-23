@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\data",
-    "\\data\\image",
-    "\\data\\image\\bullet"
+    "\\src",
+    "\\src\\animation",
+    "\\src\\obj",
+    "\\src\\obj\\entity",
+    "\\src\\obj\\entity\\item",
+    "\\src\\UI"
   ],
   "SelectedNode": "\\main.py",
   "PreviewInSolutionExplorer": false

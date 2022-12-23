@@ -5,7 +5,7 @@ from src.animation.animation_repository import AnimationRepository
 The file store the constant object or variable.
 """
 # Screen pixel size.
-SCREEN_SIZE = (1600, 900)
+SCREEN_SIZE = (1920, 1080)
 # Room consist of many tiles. It's one tile's size on pixel.
 TILE_SIZE = (36, 36)
 # The room consist of 20 * 20 tiles on width and height.
@@ -56,11 +56,20 @@ def init():
         pygame.mixer.music.set_volume(volume)
         pygame.mixer.music.play(-1)
 
+
     def init_obj(name, number, is_alpha=False):
         if is_alpha:
-            IMAGE[name] = [pygame.image.load("data/image/%s/%d.png" % (name, i)).convert_alpha() for i in range(number)]
+            if (name == 'start') & (number == 3):
+                IMAGE[name] = [scale(load("data/image/start/3.png"), (SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2).convert_alpha())]
+            else:
+                IMAGE[name] = [load("data/image/%s/%d.png" % (name, i)).convert_alpha() for i in range(number)]
+
         else:
-            IMAGE[name] = [pygame.image.load("data/image/%s/%d.png" % (name, i)).convert() for i in range(number)]
+            if (name == 'start') & (number == 3):
+                IMAGE[name] = [scale(load("data/image/start/3.png"), (SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2).convert())]
+            else:
+                IMAGE[name] = [load("data/image/%s/%d.png" % (name, i)).convert() for i in range(number)]
+ 
 
     init_obj('ground', 8)
     init_obj('wall', 6, is_alpha=True)
