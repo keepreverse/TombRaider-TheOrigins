@@ -20,7 +20,7 @@ class Armor7(Armor):
 
     @property
     def information(self):
-        return '    Delicate wooden shield, beautiful and with decoration, it has 7 points of defense. :D'
+        return '    Delicate wooden shield, beautiful and with decoration, it has 7 points of defense.'
 
 
 class Armor9(Armor):
@@ -29,7 +29,7 @@ class Armor9(Armor):
 
     @property
     def information(self):
-        return '    Shield used by knight in middle ages, it has 9 points of defense. :D'
+        return '    Shield used by knight in middle ages, it has 9 points of defense.'
 
 
 class Armor11(Armor):
@@ -38,7 +38,7 @@ class Armor11(Armor):
 
     @property
     def information(self):
-        return '    A sapphire shield, durable and glamorous, it has 11 points of defense. :D'
+        return '    A sapphire shield, durable and glamorous, it has 11 points of defense.'
 
 
 class Armor13(Armor):
@@ -47,7 +47,7 @@ class Armor13(Armor):
 
     @property
     def information(self):
-        return '    A Moon shield. Made by rock of the moon, it has 13 points of defense. :D'
+        return '    A Moon shield. Made by rock of the moon, it has 13 points of defense.'
 
 
 class Armor15(Armor):
@@ -56,4 +56,4 @@ class Armor15(Armor):
 
     @property
     def information(self):
-        return '    A King shield. the best shield in the world, it has 15 points of defense. :D'
+        return '    A King shield. the best shield in the world, it has 15 points of defense.'

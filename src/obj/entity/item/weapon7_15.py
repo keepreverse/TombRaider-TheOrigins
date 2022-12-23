@@ -12,7 +12,7 @@ class Weapon7(Weapon):
 
     @property
     def information(self):
-        return '    A birch weapon. my grandma sent me when i 7 years old, it has 7 points of damage. :D'
+        return '    A birch weapon. my grandma sent me when i 7 years old, it has 7 points of damage.'
 
 
 class Weapon9(Weapon):
@@ -21,7 +21,7 @@ class Weapon9(Weapon):
 
     @property
     def information(self):
-        return '    A Love bow. my girlfriend sent me when i 19 years old, it has 9 points of damage. :D'
+        return '    A Love bow. my girlfriend sent me when i 19 years old, it has 9 points of damage.'
 
 
 class Weapon11(Weapon):
@@ -30,7 +30,7 @@ class Weapon11(Weapon):
 
     @property
     def information(self):
-        return '    A simple cane. my dad sent me when i 25 years old, it has 11 points of damage. :D'
+        return '    A simple cane. my dad sent me when i 25 years old, it has 11 points of damage.'
 
 
 class Weapon13(Weapon):
@@ -39,7 +39,7 @@ class Weapon13(Weapon):
 
     @property
     def information(self):
-        return '    A sapphire  cane. durable and glamorous, it has 13 points of damage. :D'
+        return '    A sapphire  cane. durable and glamorous, it has 13 points of damage.'
 
 
 class Weapon15(Weapon):
@@ -48,4 +48,4 @@ class Weapon15(Weapon):
 
     @property
     def information(self):
-        return '    king\'s sceptre,  the best weapon in the world, it has 15 points of damage :D.'
+        return '    king\'s sceptre,  the best weapon in the world, it has 15 points of damage.'

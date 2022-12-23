@@ -25,6 +25,7 @@ class Player(Creature):
         self.__b1 = False
         self.shoot_sound = pygame.mixer.Sound('data/music/shoot.wav')
 
+
     @property
     def defense(self):
         return var.bag.armor.defense
@@ -113,7 +114,7 @@ class Player(Creature):
         if self.__b1:
             shooting_bullet = var.bag.weapon.shoot(self.rect.center, self.shoot_dir, self)
             if shooting_bullet is not None:
-                self.shoot_sound.play()
+                self.shoot_sound.play().set_volume(0.1)
                 var.map.active_room.entities.append(shooting_bullet)
 
     def collide_entity(self, *entities):

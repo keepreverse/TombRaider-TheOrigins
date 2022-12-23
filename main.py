@@ -4,14 +4,15 @@ import var
 from src.UI.interface_play import PLAY
 from src.tool.vector import Vector
 from src.UI.interface_start import START
+
 """
-The entry of the program.
+The entry of the program
 """
 
 if __name__ == '__main__':
     # pygame initialization
     pygame.init()
-    pygame.display.set_caption('Tomb Raider: Old Times')
+    pygame.display.set_caption('Tomb Raider: Origins')
     # Initialize the screen
     var.screen = pygame.display.set_mode(const.SCREEN_SIZE)
     # Initialize const file, include the music, image and animation
