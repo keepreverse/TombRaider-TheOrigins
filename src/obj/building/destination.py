@@ -15,4 +15,4 @@ class Destination(TriggerBuilding):
 
     def on_trigger(self, entity):
         if entity == var.player and var.bag.has_treasure:
-            var.interface = var.start
+            var.interface = var.death

@@ -2,6 +2,7 @@ import pygame
 import const
 import var
 from src.UI.interface_play import PLAY
+from src.UI.interface_death import DEATH
 from src.tool.vector import Vector
 from src.UI.interface_start import START
 
@@ -20,6 +21,8 @@ if __name__ == '__main__':
     # Initialize the START and PLAY interface and set START as the active interface
     var.interface = var.start = START()
     var.play = PLAY()
+    var.death = DEATH()
+
     # Use to maintain the FPS
     clock = pygame.time.Clock()
 

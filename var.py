@@ -16,6 +16,7 @@ interface = None
 loading = None
 start = None
 play = None
+death = None
 pause = None
 option = None
 # bool

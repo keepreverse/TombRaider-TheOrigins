@@ -1,0 +1,9 @@
+from const import SCREEN_SIZE
+from src.UI.interface import Interface
+from src.UI.image_death import ImageDeath
+from src.UI.button_play import ButtonPlay
+
+class DEATH(Interface):
+    def __init__(self):
+        super().__init__(ImageDeath((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2)),
+                         ButtonPlay((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2 - 30)))

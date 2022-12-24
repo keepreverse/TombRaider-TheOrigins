@@ -1,7 +1,6 @@
 import var
 from src.UI.button import CustomButton
 
-
 class ButtonTitle(CustomButton):
     def __init__(self, center):
         super().__init__(center, (255, 255, 255), (150, 150, 150), (120, 40), "Back to title", 25, smooth=True)

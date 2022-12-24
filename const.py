@@ -1,11 +1,13 @@
 import pygame
 import os
 from src.animation.animation_repository import AnimationRepository
+
 """
 The file store the constant object or variable.
 """
+
 # Screen pixel size.
-SCREEN_SIZE = (1600, 900)
+SCREEN_SIZE = (1920, 1080)
 # Room consist of many tiles. It's one tile's size on pixel.
 TILE_SIZE = (36, 36)
 # The room consist of 20 * 20 tiles on width and height.
@@ -76,6 +78,7 @@ def init():
     init_obj('weapon', 5, is_alpha=True)
     init_obj('treasure', 1, is_alpha=True)
     init_obj('start', 7, is_alpha=True)
+    init_obj('death', 7, is_alpha=True)
     init_creature(IMAGE, LEGAL_STATE, "player", 2)
     init_creature(IMAGE, LEGAL_STATE, "guard", 2)
     init_creature(IMAGE, LEGAL_STATE, "mummy", 2)
