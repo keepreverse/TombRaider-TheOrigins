@@ -9,15 +9,15 @@ from src.UI.label_enemies_number import LabelEnemiesNumber
 class OPTION(Interface):
     def __init__(self):
         super().__init__(
-            Label((SCREEN_SIZE[0]/20, SCREEN_SIZE[1]/6), 'Move Up:', is_left_center=True), Label((250, 100), 'W'),
-            Label((SCREEN_SIZE[0]/20, SCREEN_SIZE[1]/6*2), 'Move Down:', is_left_center=True), Label((250, 200), 'S'),
-            Label((SCREEN_SIZE[0]/20, SCREEN_SIZE[1]/6*3), 'Move Left:', is_left_center=True), Label((250, 300), 'A'),
-            Label((SCREEN_SIZE[0]/20, SCREEN_SIZE[1]/6*4), 'Move Right:', is_left_center=True), Label((250, 400), 'D'),
-            Label((SCREEN_SIZE[0]/20, SCREEN_SIZE[1]/6*5), 'Pick Up:', is_left_center=True), Label((250, 500), 'Space'),
-            Label((SCREEN_SIZE[0]/32*11, SCREEN_SIZE[1]/6), 'Pause:', is_left_center=True),  Label((730, 100), 'Esc'),
-            Label((SCREEN_SIZE[0]/32*11, SCREEN_SIZE[1]/6*2), 'Attack:', is_left_center=True),  Label((730, 200), 'Mouse Left'),
-            Label((SCREEN_SIZE[0]/32*11, SCREEN_SIZE[1]/6*3), 'Reload:', is_left_center=True),  Label((730, 300), 'R'),
-            Label((SCREEN_SIZE[0]/32*11, SCREEN_SIZE[1]/6*4), 'Enemies:', is_left_center=True),  LabelEnemiesNumber((730, 400)),
-            ButtonEnemiesIncrease((SCREEN_SIZE[0]/32*11, SCREEN_SIZE[1]/2)), ButtonEnemiesDecrease((860, 400)),
-            ButtonTitle((590, 500)))
-
+            Label((SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/8), 'Move Up:', is_left_center=True), Label((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8), 'W'),
+            Label((SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/8 * 2), 'Move Down:', is_left_center=True), Label((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8 * 2), 'S'),
+            Label((SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/8 * 3), 'Move Left:', is_left_center=True), Label((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8 * 3), 'A'),
+            Label((SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/8 * 4), 'Move Right:', is_left_center=True), Label((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8 * 4), 'D'),
+            Label((SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/8 * 5), 'Pick Up:', is_left_center=True), Label((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8 * 5), 'Space'),
+            Label((SCREEN_SIZE[0]/1.65, SCREEN_SIZE[1]/8), 'Pause:', is_left_center=True),  Label((SCREEN_SIZE[0]/1.3, SCREEN_SIZE[1]/8), 'Esc'),
+            Label((SCREEN_SIZE[0]/1.65, SCREEN_SIZE[1]/8 * 2), 'Attack:', is_left_center=True),  Label((SCREEN_SIZE[0]/1.3, SCREEN_SIZE[1]/8 * 2), 'Mouse Left'),
+            Label((SCREEN_SIZE[0]/1.65, SCREEN_SIZE[1]/8 * 3), 'Reload:', is_left_center=True),  Label((SCREEN_SIZE[0]/1.3, SCREEN_SIZE[1]/8 * 3), 'R'),
+            Label((SCREEN_SIZE[0]/1.65, SCREEN_SIZE[1]/8 * 4), 'Enemies:', is_left_center=True),  LabelEnemiesNumber((SCREEN_SIZE[0]/1.308, SCREEN_SIZE[1]/8 * 4)),
+            ButtonEnemiesDecrease((SCREEN_SIZE[0]/3 + SCREEN_SIZE[0]/3 * 1.18, SCREEN_SIZE[1]/8 * 4.3)),
+            ButtonEnemiesIncrease((SCREEN_SIZE[0]/3 + SCREEN_SIZE[0]/3 * 1.18, SCREEN_SIZE[1]/8 * 3.65)),
+            ButtonTitle((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/8 * 6)))

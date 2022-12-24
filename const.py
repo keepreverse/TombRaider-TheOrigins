@@ -5,7 +5,7 @@ from src.animation.animation_repository import AnimationRepository
 The file store the constant object or variable.
 """
 # Screen pixel size.
-SCREEN_SIZE = (1920, 1080)
+SCREEN_SIZE = (1600, 900)
 # Room consist of many tiles. It's one tile's size on pixel.
 TILE_SIZE = (36, 36)
 # The room consist of 20 * 20 tiles on width and height.
@@ -59,15 +59,8 @@ def init():
 
     def init_obj(name, number, is_alpha=False):
         if is_alpha:
-            if (name == 'start') & (number == 3):
-                IMAGE[name] = [scale(load("data/image/start/3.png"), (SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2).convert_alpha())]
-            else:
                 IMAGE[name] = [load("data/image/%s/%d.png" % (name, i)).convert_alpha() for i in range(number)]
-
         else:
-            if (name == 'start') & (number == 3):
-                IMAGE[name] = [scale(load("data/image/start/3.png"), (SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2).convert())]
-            else:
                 IMAGE[name] = [load("data/image/%s/%d.png" % (name, i)).convert() for i in range(number)]
  
 

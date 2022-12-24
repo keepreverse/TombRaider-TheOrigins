@@ -1,5 +1,5 @@
 import var
-from const import ROOM_SIZE
+from const import ROOM_SIZE, SCREEN_SIZE
 from src.UI.interface_pause import PAUSE
 from src.UI.progress_bar import ProgressBar
 from src.UI.interface import Interface
@@ -11,7 +11,7 @@ from src.obj.entity.creature.player import Player
 
 class LOADING(Interface):
     def __init__(self):
-        super().__init__(Label((480, 540), ''), ProgressBar((480, 600), (400, 20), 4))
+        super().__init__(Label((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2), ''), ProgressBar((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/1.8), ((SCREEN_SIZE[0]/2.2, SCREEN_SIZE[1]/54)), 5))
         self.__cnt = 0
 
     def update(self):

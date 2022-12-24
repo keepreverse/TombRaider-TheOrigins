@@ -114,7 +114,7 @@ class Player(Creature):
         if self.__b1:
             shooting_bullet = var.bag.weapon.shoot(self.rect.center, self.shoot_dir, self)
             if shooting_bullet is not None:
-                self.shoot_sound.play().set_volume(0.1)
+                self.shoot_sound.play().set_volume(0.05)
                 var.map.active_room.entities.append(shooting_bullet)
 
     def collide_entity(self, *entities):
