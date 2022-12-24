@@ -17,7 +17,7 @@ The player, use keyboard and mouse to control.
 class Player(Creature):
     def __init__(self, pos):
         super().__init__(Rect(pos[0] * TILE_SIZE[0], pos[1] * TILE_SIZE[1], 24, 10),
-                         AnimationSystem(**const.ANIMATION_REPOSITORY.animations['player']), 5, 10, 0, 0)
+                         AnimationSystem(**const.ANIMATION_REPOSITORY.animations['player']), 3.5, 10, 0, 0)
         self.rect.center = self.rect.left_top + Vector(TILE_SIZE[0] / 2, TILE_SIZE[1] / 2)
         # The corresponding key is pressing
         self.__w, self.__s, self.__a, self.__d,  self.__r, self.__space = False, False, False, False, False, False
