@@ -1,5 +1,5 @@
 from const import SCREEN_SIZE
-from src.UI.button_title import ButtonTitle
+from src.UI.button_titlem import ButtonTitleM
 from src.UI.interface import Interface
 from src.UI.label import Label
 from src.UI.button_enemies_number import ButtonEnemiesDecrease, ButtonEnemiesIncrease
@@ -20,4 +20,4 @@ class OPTION(Interface):
             Label((SCREEN_SIZE[0]/1.65, SCREEN_SIZE[1]/8 * 4), 'Enemies:', is_left_center=True),  LabelEnemiesNumber((SCREEN_SIZE[0]/1.308, SCREEN_SIZE[1]/8 * 4)),
             ButtonEnemiesDecrease((SCREEN_SIZE[0]/3 + SCREEN_SIZE[0]/3 * 1.18, SCREEN_SIZE[1]/8 * 4.3)),
             ButtonEnemiesIncrease((SCREEN_SIZE[0]/3 + SCREEN_SIZE[0]/3 * 1.18, SCREEN_SIZE[1]/8 * 3.65)),
-            ButtonTitle((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/8 * 6)))
+            ButtonTitleM((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/8 * 6)))

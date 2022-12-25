@@ -1,4 +1,5 @@
 import var
+from const import Init, SOUND
 from src.UI.button import CustomButton
 
 class ButtonTitle(CustomButton):
@@ -7,6 +8,7 @@ class ButtonTitle(CustomButton):
 
     def on_click(self):
         var.interface = var.start
+        Init.init_music(SOUND, "bg", 0.2)
 
     def on_hover(self):
         self.image = self.images[1]

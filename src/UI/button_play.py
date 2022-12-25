@@ -13,7 +13,7 @@ class ButtonPlay(Button):
 
     def on_hover(self):
         self.image = self.images[0]
-
+        
     def on_click(self):
         self.image = self.images[1]
         var.interface = var.loading = LOADING()

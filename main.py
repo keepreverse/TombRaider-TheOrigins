@@ -17,7 +17,7 @@ if __name__ == '__main__':
     # Initialize the screen
     var.screen = pygame.display.set_mode(const.SCREEN_SIZE)
     # Initialize const file, include the music, image and animation
-    const.init()
+    const.Init()
     # Initialize the START and PLAY interface and set START as the active interface
     var.interface = var.start = START()
     var.play = PLAY()
@@ -51,6 +51,6 @@ if __name__ == '__main__':
         var.screen.fill((0, 0, 0))
         var.interface.draw(var.screen)
         # Display the FPS on the top left corner
-        var.screen.blit(pygame.font.Font(None, 20).render("FPS: %d" % clock.get_fps(), True, (255, 255, 255)), (10, 10))
+        var.screen.blit(pygame.font.Font(None, 30).render("FPS: %d" % clock.get_fps(), True, (255, 255, 255)), (20, 10))
         pygame.display.update()
     pygame.quit()

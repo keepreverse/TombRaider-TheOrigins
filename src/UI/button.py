@@ -1,4 +1,5 @@
 import pygame
+import pygame.display
 import var
 from pygame.surface import Surface
 from src.UI.component import Component
@@ -12,10 +13,10 @@ When mouse is on it, on_hover() will be called.
 
 
 class Button(Component):
-    def __init__(self, center, label, image_inactive, image_active, mysize=None):
+    def __init__(self, center, label, image_active, image_inactive, mysize=None):
         self.label = label
         self.mysize = mysize
-        super().__init__(center, image_inactive, image_active)
+        super().__init__(center, image_active, image_inactive)
 
     @property
     def image(self):
@@ -72,31 +73,31 @@ class CustomButton(Button):
     """
     def __init__(self, center, button_active_color, button_inactive_color, button_size,
                  label_text, label_size, label_color=(0, 0, 0), label_font_type=None, smooth=False):
-        image_active = pygame.Surface(button_size).convert_alpha()
         image_inactive = pygame.Surface(button_size).convert_alpha()
-        image_active.fill((0, 0, 0, 0))
+        image_active = pygame.Surface(button_size).convert_alpha()
         image_inactive.fill((0, 0, 0, 0))
+        image_active.fill((0, 0, 0, 0))
         if not smooth:
-            image_active.fill(button_active_color)
-            image_inactive.fill(button_inactive_color)
+            image_inactive.fill(button_active_color)
+            image_active.fill(button_inactive_color)
         else:
             r = min(int(1/10*button_size[0]), int(1/10*button_size[1]))
             w = int(button_size[0])
             h = int(button_size[1])
-            pygame.draw.circle(image_active, button_active_color, (r, r), r)
-            pygame.draw.circle(image_active, button_active_color, (r, h - r), r)
-            pygame.draw.circle(image_active, button_active_color, (w - r, r), r)
-            pygame.draw.circle(image_active, button_active_color, (w - r, h - r), r)
-            pygame.draw.rect(image_active, button_active_color, (0, r, w, h - 2 * r))
-            pygame.draw.rect(image_active, button_active_color, (r, 0, w - 2 * r, h))
-            pygame.draw.circle(image_inactive, button_inactive_color, (r, r), r)
-            pygame.draw.circle(image_inactive, button_inactive_color, (r, h - r), r)
-            pygame.draw.circle(image_inactive, button_inactive_color, (w - r, r), r)
-            pygame.draw.circle(image_inactive, button_inactive_color, (w - r, h - r), r)
-            pygame.draw.rect(image_inactive, button_inactive_color, (0, r, w, h - 2 * r))
-            pygame.draw.rect(image_inactive, button_inactive_color, (r, 0, w - 2 * r, h))
+            pygame.draw.circle(image_inactive, button_active_color, (r, r), r)
+            pygame.draw.circle(image_inactive, button_active_color, (r, h - r), r)
+            pygame.draw.circle(image_inactive, button_active_color, (w - r, r), r)
+            pygame.draw.circle(image_inactive, button_active_color, (w - r, h - r), r)
+            pygame.draw.rect(image_inactive, button_active_color, (0, r, w, h - 2 * r))
+            pygame.draw.rect(image_inactive, button_active_color, (r, 0, w - 2 * r, h))
+            pygame.draw.circle(image_active, button_inactive_color, (r, r), r)
+            pygame.draw.circle(image_active, button_inactive_color, (r, h - r), r)
+            pygame.draw.circle(image_active, button_inactive_color, (w - r, r), r)
+            pygame.draw.circle(image_active, button_inactive_color, (w - r, h - r), r)
+            pygame.draw.rect(image_active, button_inactive_color, (0, r, w, h - 2 * r))
+            pygame.draw.rect(image_active, button_inactive_color, (r, 0, w - 2 * r, h))
         if label_text != '':
             label = Label((button_size[0]/2, button_size[1]/2), label_text, label_size, label_color, label_font_type)
         else:
             label = None
-        super().__init__(center, label, image_inactive, image_active)
+        super().__init__(center, label, image_active, image_inactive)
