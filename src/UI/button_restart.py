@@ -9,7 +9,7 @@ class ButtonRestart(CustomButton):
 
     def on_click(self):
         var.interface = var.loading
-        Init.init_music(SOUND, "bg", 0.2)
+        Init.init_music(SOUND, "mt", 0.2)
         
     def on_hover(self):
         self.image = self.images[1]

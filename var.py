@@ -17,6 +17,7 @@ loading = None
 start = None
 play = None
 death = None
+end = None
 pause = None
 option = None
 # bool

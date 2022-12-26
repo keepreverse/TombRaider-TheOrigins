@@ -1,4 +1,5 @@
 import var
+from const import SCREEN_SIZE
 from src.UI.button import CustomButton
 """
 A item in the bag.
@@ -7,9 +8,10 @@ A item in the bag.
 
 class ButtonItem(CustomButton):
     def __init__(self, item_id):
-        super().__init__((0, 0), (100, 200, 100), (200, 100, 200), (70, 70), '', 0, smooth=True)
+        super().__init__((0, 0), (100, 200, 100), (80, 80, 80), (70, 70), '', 0, smooth=True)
         self.item_id = item_id
-        self.rect.center = (55 + self.item_id * 90, 255) if item_id <= 3 else (55 + (self.item_id - 4) * 90, 345)
+        self.rect.center = (55 + self.item_id * 90, SCREEN_SIZE[1]/4 + SCREEN_SIZE[1]/14.25) if item_id <= 3 \
+        else (55 + (self.item_id - 4) * 90, SCREEN_SIZE[1]/4 + SCREEN_SIZE[1]/5.55)
 
     @property
     def item_id(self):

@@ -1,5 +1,6 @@
 import var
 import const
+from const import Init, SOUND
 from src.UI.button import Button
 from src.UI.interface_loading import LOADING
 
@@ -17,3 +18,4 @@ class ButtonPlay(Button):
     def on_click(self):
         self.image = self.images[1]
         var.interface = var.loading = LOADING()
+        #Init.init_music(SOUND, "mt", 0.2)

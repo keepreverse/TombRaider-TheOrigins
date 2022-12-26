@@ -33,35 +33,35 @@ from src.UI.label_weapon import LabelWeaponName, LabelWeaponDamage, LabelWeaponR
 class PAUSE(Interface):
     def __init__(self):
         super().__init__()
-        self.__profile = [Image((160, 100), Surface((320, 200))),
+        self.__profile = [Image((SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/8), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/4))),
                           ImagePlayerBackground(),
                           ImagePlayer((80, 100)), LabelHP((160, 55)), LabelBullet((160, 85)),
                           LabelBuffName((160, 115)), LabelBuffTime((160, 145))]
-        self.__equipment = [Image((480, 100), Surface((320, 200))),
-                            ImageArmorBackground((375, 145)), ImageArmor((375, 145)),
-                            ImageWeaponBackground((375, 55)), ImageWeapon((375, 55)),
-                            LabelArmorName((430, 115)), LabelArmorDefense((430, 135)),
-                            LabelWeaponName((430, 25)), LabelWeaponDamage((430, 45)),
-                            LabelWeaponReload((430, 65)), LabelWeaponInterval((430, 85))]
-        self.__bag = [Image((320, 300), Surface((640, 200))), *[ButtonItem(i) for i in range(8)],
+        self.__equipment = [Image((SCREEN_SIZE[0]/6 + SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/4))),
+                            ImageArmorBackground((775, 145)), ImageArmor((775, 145)),
+                            ImageWeaponBackground((775, 55)), ImageWeapon((775, 55)),
+                            LabelArmorName((830, 115)), LabelArmorDefense((830, 135)),
+                            LabelWeaponName((830, 25)), LabelWeaponDamage((830, 45)),
+                            LabelWeaponReload((830, 65)), LabelWeaponInterval((830, 85))]
+        self.__bag = [Image((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8 + SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/1.5, SCREEN_SIZE[1]/4))), *[ButtonItem(i) for i in range(8)],
                       *[ImageItem(i) for i in range(8)], *[LabelItem(i) for i in range(8)],
-                      ButtonUse((510, 250)), ButtonDrop((510, 350))]
-        self.__information = [Image((320, 520), Surface((640, 240))),
-                              ImageBackground((50, 450), (70, 70), (150, 150, 150), True),
-                              ImageActiveItem((50, 450)), LabelInformationName((100, 435)),
-                              LabelInformationType((100, 470)), LabelInformation1((20, 510)),
-                              LabelInformation2((20, 540)), LabelInformation3((20, 570))]
-        self.__map = [Image((800, 160), Surface((320, 320))), ImageMap((800, 160))]
-        self.__button = [Image((800, 480), Surface((320, 320))),
-                         ButtonContinue((720, 400)), ButtonTitle((880, 400)), ButtonRestart((720, 560))]
+                      ButtonUse((610, 350)), ButtonDrop((610, 450))]
+        self.__information = [Image((SCREEN_SIZE[0]/3, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/1.5, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4 * 2))),
+                              ImageBackground((50, 850), (70, 70), (150, 150, 150), True),
+                              ImageActiveItem((50, 850)), LabelInformationName((100, 835)),
+                              LabelInformationType((100, 870)), LabelInformation1((20, 910)),
+                              LabelInformation2((20, 940)), LabelInformation3((20, 970))]
+        self.__map = [Image((SCREEN_SIZE[0] - SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/2))), ImageMap((900, 250))]
+        self.__button = [Image((SCREEN_SIZE[0] - SCREEN_SIZE[0]/6, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4 * 2))),
+                         ButtonContinue((1620, 850)), ButtonTitle((1780, 900)), ButtonRestart((1620, 950))]
 
-        self.__profile[0].image.fill((255, 100, 255))
-        self.__equipment[0].image.fill((100, 100, 255))
-        self.__bag[0].image.fill((100, 255, 255))
-        self.__information[0].image.fill((255, 255, 255))
-        self.__map[0].image.fill((255, 255, 100))
-        self.__map[1].image.fill((0, 0, 0))
-        self.__button[0].image.fill((100, 255, 100))
+        self.__profile[0].image.fill((20, 20, 20))
+        self.__equipment[0].image.fill((30, 30, 30))
+        self.__bag[0].image.fill((90, 90, 90))
+        self.__information[0].image.fill((60, 60, 60))
+        self.__map[0].image.fill((120, 120, 120))
+        self.__map[1].image.fill((220, 220, 220))
+        self.__button[0].image.fill((80, 80, 80))
 
         self.__surface = Surface(SCREEN_SIZE)
         self.__update_list = [self.__profile, self.__equipment, self.__bag, self.__information, self.__map, self.__button]

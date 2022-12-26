@@ -18,4 +18,4 @@ class ButtonTryAgain(Button):
     def on_click(self):
         self.image = self.images[1]
         var.interface = var.loading = LOADING()
-        Init.init_music(SOUND, "bg", 0.2)
+        Init.init_music(SOUND, "mt", 0.2)

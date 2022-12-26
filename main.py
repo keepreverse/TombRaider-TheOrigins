@@ -1,10 +1,12 @@
 import pygame
 import const
 import var
+from src.UI.interface_start import START
 from src.UI.interface_play import PLAY
 from src.UI.interface_death import DEATH
+from src.UI.interface_end import END
 from src.tool.vector import Vector
-from src.UI.interface_start import START
+
 
 """
 The entry of the program
@@ -22,6 +24,7 @@ if __name__ == '__main__':
     var.interface = var.start = START()
     var.play = PLAY()
     var.death = DEATH()
+    var.end = END()
 
     # Use to maintain the FPS
     clock = pygame.time.Clock()
