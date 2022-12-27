@@ -20,24 +20,24 @@ class Monster(Creature):
         self.collectibles = [*collectibles]
         # Add the drop bullet and potion
         if random.randint(0, 0) == 0:
-            self.collectibles.append(Bullet(random.randint(1, 3) * 10))
+            self.collectibles.append(Bullet(random.randint(1, 3) * 8))
         if random.randint(0, 1) == 0:
             self.collectibles.append(Potion())
         # Add the drop weapon
-        if random.randint(0, 1) == 0:
+        if random.randint(0, 2) == 0:
             self.collectibles.append(Weapon7())
-        elif random.randint(0, 2) == 0:
-            self.collectibles.append(Weapon9())
         elif random.randint(0, 4) == 0:
+            self.collectibles.append(Weapon9())
+        elif random.randint(0, 6) == 0:
             self.collectibles.append(Weapon11())
         elif random.randint(0, 8) == 0:
             self.collectibles.append(Weapon13())
         # Add the drop armor
-        if random.randint(0, 1) == 0:
+        if random.randint(0, 2) == 0:
             self.__collectibles.append(Armor7())
-        elif random.randint(0, 2) == 0:
-            self.__collectibles.append(Armor9())
         elif random.randint(0, 4) == 0:
+            self.__collectibles.append(Armor9())
+        elif random.randint(0, 6) == 0:
             self.__collectibles.append(Armor11())
         elif random.randint(0, 8) == 0:
             self.__collectibles.append(Armor13())

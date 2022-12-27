@@ -12,7 +12,7 @@ SCREEN_SIZE = (1920, 1080)
 # Room consist of many tiles. It's one tile's size on pixel.
 TILE_SIZE = (36, 36)
 # The room consist of 20 * 20 tiles on width and height.
-ROOM_SIZE = (20, 20)
+ROOM_SIZE = (int(SCREEN_SIZE[0]/60), int(SCREEN_SIZE[0]/60))
 # The map consist of maximum 6 * 6 room on width and height.
 MAP_SIZE = (6, 6)
 FPS = 60
@@ -90,5 +90,5 @@ init.init_creature(IMAGE, LEGAL_STATE, "player", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "guard", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "mummy", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "pharaoh", 2)
-#Init.init_music(SOUND, "mt", 0.2)
+#Init.init_music(SOUND, "wtf", 0.2)
 ANIMATION_REPOSITORY = AnimationRepository()

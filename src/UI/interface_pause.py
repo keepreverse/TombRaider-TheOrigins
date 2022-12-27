@@ -35,25 +35,25 @@ class PAUSE(Interface):
         super().__init__()
         self.__profile = [Image((SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/8), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/4))),
                           ImagePlayerBackground(),
-                          ImagePlayer((80, 100)), LabelHP((160, 55)), LabelBullet((160, 85)),
-                          LabelBuffName((160, 115)), LabelBuffTime((160, 145))]
+                          ImagePlayer((80, 135)), LabelHP((160, 95)), LabelBullet((160, 125)),
+                          LabelBuffName((160, 155)), LabelBuffTime((160, 185))]
         self.__equipment = [Image((SCREEN_SIZE[0]/6 + SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/4))),
-                            ImageArmorBackground((775, 145)), ImageArmor((775, 145)),
-                            ImageWeaponBackground((775, 55)), ImageWeapon((775, 55)),
-                            LabelArmorName((830, 115)), LabelArmorDefense((830, 135)),
-                            LabelWeaponName((830, 25)), LabelWeaponDamage((830, 45)),
-                            LabelWeaponReload((830, 65)), LabelWeaponInterval((830, 85))]
+                            ImageArmorBackground((775, 175)), ImageArmor((775, 175)),
+                            ImageWeaponBackground((775, 85)), ImageWeapon((775, 85)),
+                            LabelArmorName((830, 150)), LabelArmorDefense((830, 170)),
+                            LabelWeaponName((830, 55)), LabelWeaponDamage((830, 75)),
+                            LabelWeaponReload((830, 95)), LabelWeaponInterval((830, 115))]
         self.__bag = [Image((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/8 + SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/1.5, SCREEN_SIZE[1]/4))), *[ButtonItem(i) for i in range(8)],
                       *[ImageItem(i) for i in range(8)], *[LabelItem(i) for i in range(8)],
-                      ButtonUse((610, 350)), ButtonDrop((610, 450))]
+                      ButtonUse((510, 350)), ButtonDrop((510, 450))]
         self.__information = [Image((SCREEN_SIZE[0]/3, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/1.5, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4 * 2))),
                               ImageBackground((50, 850), (70, 70), (150, 150, 150), True),
                               ImageActiveItem((50, 850)), LabelInformationName((100, 835)),
                               LabelInformationType((100, 870)), LabelInformation1((20, 910)),
                               LabelInformation2((20, 940)), LabelInformation3((20, 970))]
-        self.__map = [Image((SCREEN_SIZE[0] - SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/2))), ImageMap((900, 250))]
+        self.__map = [Image((SCREEN_SIZE[0] - SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/2))), ImageMap((SCREEN_SIZE[0] - SCREEN_SIZE[0]/12 * 2, 260))]
         self.__button = [Image((SCREEN_SIZE[0] - SCREEN_SIZE[0]/6, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4 * 2))),
-                         ButtonContinue((1620, 850)), ButtonTitle((1780, 900)), ButtonRestart((1620, 950))]
+                         ButtonContinue((1520, 750)), ButtonTitle((1680, 800)), ButtonRestart((1520, 850))]
 
         self.__profile[0].image.fill((20, 20, 20))
         self.__equipment[0].image.fill((30, 30, 30))

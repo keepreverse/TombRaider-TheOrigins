@@ -8,43 +8,43 @@ We didn't design the weapon carefully, their shoot interval time, clip and reloa
 
 class Weapon7(Weapon):
     def __init__(self):
-        super().__init__("Birch bow", const.IMAGE['weapon'][0], 7, 30, 10, 60)
+        super().__init__("Birch bow", const.IMAGE['weapon'][0], 8, 60, 10, 60)
 
     @property
     def information(self):
-        return '    A birch weapon. my grandma sent me when i 7 years old, it has 7 points of damage.'
+        return '    A birch weapon. my grandma sent me when i 6 years old, it has 6 points of damage.'
 
 
 class Weapon9(Weapon):
     def __init__(self):
-        super().__init__("Love bow", const.IMAGE['weapon'][1], 9, 30, 10, 60)
+        super().__init__("Love bow", const.IMAGE['weapon'][1], 10, 50, 10, 60)
 
     @property
     def information(self):
-        return '    A Love bow. my girlfriend sent me when i 19 years old, it has 9 points of damage.'
+        return '    A Love bow. my girlfriend sent me when i 19 years old, it has 8 points of damage.'
 
 
 class Weapon11(Weapon):
     def __init__(self):
-        super().__init__("simple cane", const.IMAGE['weapon'][2], 11, 30, 10, 60)
+        super().__init__("simple cane", const.IMAGE['weapon'][2], 10, 40, 12, 60)
 
     @property
     def information(self):
-        return '    A simple cane. my dad sent me when i 25 years old, it has 11 points of damage.'
+        return '    A simple cane. my dad sent me when i 25 years old, it has 10 points of damage.'
 
 
 class Weapon13(Weapon):
     def __init__(self):
-        super().__init__("sapphire  cane", const.IMAGE['weapon'][3], 13, 30, 10, 60)
+        super().__init__("sapphire  cane", const.IMAGE['weapon'][3], 12, 30, 8, 60)
 
     @property
     def information(self):
-        return '    A sapphire  cane. durable and glamorous, it has 13 points of damage.'
+        return '    A sapphire  cane. durable and glamorous, it has 12 points of damage.'
 
 
 class Weapon15(Weapon):
     def __init__(self):
-        super().__init__("king's sceptre", const.IMAGE['weapon'][4], 15, 30, 10, 60)
+        super().__init__("king's sceptre", const.IMAGE['weapon'][4], 15, 80, 6, 60)
 
     @property
     def information(self):

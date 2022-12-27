@@ -14,7 +14,7 @@ Control the map.
 
 class PLAY(Interface):
     def __init__(self):
-        super().__init__(ImageMap((SCREEN_SIZE[0]/1.35, SCREEN_SIZE[1]/5)), LabelHP((20, 50)), ProgressBarHP((110, 48)),
+        super().__init__(ImageMap((SCREEN_SIZE[0]/1.1, SCREEN_SIZE[1]/5)), LabelHP((20, 50)), ProgressBarHP((110, 48)),
                          LabelBullet((20, 80)), ProgressBarBullet((140, 78)), LabelReloading((140, 80)))
 
     def update(self):
