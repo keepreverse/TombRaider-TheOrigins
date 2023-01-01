@@ -16,4 +16,4 @@ class ButtonMenu(Button):
     def on_click(self):
         self.image = self.images[1]
         var.interface = var.start
-        #init.init_music(SOUND, "mt", 0.2)
+        Init.init_music(SOUND, "menu", 0.2)

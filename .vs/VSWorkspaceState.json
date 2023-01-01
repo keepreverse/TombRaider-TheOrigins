@@ -6,6 +6,7 @@
     "\\src\\obj",
     "\\src\\obj\\entity",
     "\\src\\obj\\entity\\item",
+    "\\src\\tool",
     "\\src\\UI"
   ],
   "SelectedNode": "\\main.py",
