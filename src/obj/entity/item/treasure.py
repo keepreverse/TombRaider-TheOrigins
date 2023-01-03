@@ -8,10 +8,13 @@ The game will win.
 
 
 class Treasure(Collectible):
-    def __init__(self):
-        super().__init__('Treasure', const.IMAGE['treasure'][0])
+    def __init__(self, amount=1):
+        super().__init__('Treasure', const.IMAGE['treasure'][0], False, amount)
 
     @property
     def information(self):
         return '    The treasure in the maze. What a big ablaze diamond! Take it back to the entry and get out from ' \
                 'the trash place. Hurry up!'
+
+    def use(self):
+        return

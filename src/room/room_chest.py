@@ -13,7 +13,7 @@ class RoomChest(Room):
         super().init_buildings()
         self.buildings[ROOM_SIZE[0] // 2][ROOM_SIZE[1] // 2] = \
             Chest((ROOM_SIZE[0] // 2, ROOM_SIZE[1] // 2),
-                  Bullet(random.randint(1, 4) * 10), Potion(random.randint(1, 3)), Key(random.randint(1, 2)), Treasure())
+                  Bullet(random.randint(1, 4) * 5), Potion(random.randint(1, 3)), Key(random.randint(1, 2)), Treasure())
 
     def init_entities(self):
         pass

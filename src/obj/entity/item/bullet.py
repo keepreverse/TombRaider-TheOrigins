@@ -13,3 +13,6 @@ class Bullet(Collectible):
     def information(self):
         return '    They are just some bullets, but without them you can\'t shoot anymore, so please take a good ' \
                'use of it. '
+    
+    def use(self):
+        return

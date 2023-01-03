@@ -13,7 +13,7 @@ It will move to player forever in a slower speed until it is dead.
 class Mummy(Monster):
     def __init__(self, pos, *collectibles):
         super().__init__(Rect(pos[0] * TILE_SIZE[0], pos[1] * TILE_SIZE[1], 35, 20),
-                         AnimationSystem(**const.ANIMATION_REPOSITORY.animations['mummy']), 2, 10, 5, 1, *collectibles)
+                         AnimationSystem(**const.ANIMATION_REPOSITORY.animations['mummy']), 2, 14, 5, 4, *collectibles)
         self.rect.center = self.rect.left_top + Vector(TILE_SIZE[0] / 2, TILE_SIZE[1] / 2)
         self.move_interval = 80
         self.move_time = 0
