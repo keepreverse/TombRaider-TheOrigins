@@ -15,7 +15,6 @@ from src.room.room_chest import RoomChest
 from src.room.room_h import RoomH
 from src.room.room_t import RoomT
 from src.room.room_x import RoomX
-from src.room.room_z import RoomZ
 from src.room.room_trap import RoomTrap
 from src.room.room_wall import RoomWall
 """
@@ -27,7 +26,7 @@ It switch the room for player.
 
 class Map:
     # The all kinds of room can choose
-    __ROOM_KIND = [RoomEmpty, RoomChest, RoomTrap, RoomZ, RoomT, RoomX,
+    __ROOM_KIND = [RoomEmpty, RoomChest, RoomTrap, RoomT, RoomX,
                    RoomH, RoomFocus, RoomSquare, RoomMaze, RoomPath, RoomWall]
 
     def __init__(self):
@@ -111,7 +110,7 @@ class Map:
                         self.__map[i][j] = RoomChest()
                     # Other room
                     else:
-                        self.__map[i][j] = Map.__ROOM_KIND[random.randint(2, 11)]()
+                        self.__map[i][j] = Map.__ROOM_KIND[random.randint(2, 10)]()
                 # Add the door
                 for item in self.__graph[i][j]:
                     if (item[0] - i, item[1] - j) == (0, -1):

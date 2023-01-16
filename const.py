@@ -10,9 +10,9 @@ The file store the constant object or variable.
 # Screen pixel size.
 SCREEN_SIZE = (1920, 1080)
 # Room consist of many tiles. It's one tile's size on pixel.
-TILE_SIZE = (36, 36)
+TILE_SIZE = (35, 35)
 # The room consist of 20 * 20 tiles on width and height.
-ROOM_SIZE = (int(SCREEN_SIZE[0]/60)-1, int(SCREEN_SIZE[0]/60)-1)
+ROOM_SIZE = (int(SCREEN_SIZE[0]/60) - 1, int(SCREEN_SIZE[0]/60) - 2)
 # The map consist of maximum 6 * 6 room on width and height.
 MAP_SIZE = (6, 6)
 FPS = 60
@@ -76,7 +76,7 @@ var.screen = pygame.display.set_mode(SCREEN_SIZE)
 init = Init()
 init.init_obj('ground', 8)
 init.init_obj('wall', 6, is_alpha=True)
-init.init_obj('chest', 3)
+init.init_obj('chest', 2)
 init.init_obj('potion', 1, is_alpha=True)
 init.init_obj('trap', 6)
 init.init_obj('door', 6, is_alpha=True)

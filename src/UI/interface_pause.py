@@ -47,20 +47,20 @@ class PAUSE(Interface):
                       *[ImageItem(i) for i in range(8)], *[LabelItem(i) for i in range(8)],
                       ButtonUse((510, 350)), ButtonDrop((510, 450))]
         self.__information = [Image((SCREEN_SIZE[0]/3, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/1.5, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4 * 2))),
-                              ImageBackground((50, 850), (70, 70), (150, 150, 150), True),
-                              ImageActiveItem((50, 850)), LabelInformationName((100, 835)),
-                              LabelInformationType((100, 870)), LabelInformation1((20, 910)),
-                              LabelInformation2((20, 940)), LabelInformation3((20, 970))]
+                              ImageBackground((50, 750), (70, 70), (150, 150, 150), True),
+                              ImageActiveItem((50, 750)), LabelInformationName((100, 735)),
+                              LabelInformationType((100, 770)), LabelInformation1((20, 810)),
+                              LabelInformation2((20, 840)), LabelInformation3((20, 870))]
         self.__map = [Image((SCREEN_SIZE[0] - SCREEN_SIZE[0]/6, SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1]/2))), ImageMap((SCREEN_SIZE[0] - SCREEN_SIZE[0]/12 * 2, 260))]
         self.__button = [Image((SCREEN_SIZE[0] - SCREEN_SIZE[0]/6, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4), Surface((SCREEN_SIZE[0]/3, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4 * 2))),
                          ButtonContinue((1520, 750)), ButtonTitle((1680, 800)), ButtonRestart((1520, 850))]
 
-        self.__profile[0].image.fill((20, 20, 20))
-        self.__equipment[0].image.fill((30, 30, 30))
+        self.__profile[0].image.fill((45, 45, 45))
+        self.__equipment[0].image.fill((65, 65, 65))
         self.__bag[0].image.fill((90, 90, 90))
         self.__information[0].image.fill((60, 60, 60))
         self.__map[0].image.fill((120, 120, 120))
-        self.__map[1].image.fill((220, 220, 220))
+        self.__map[1].image.fill((200, 200, 200))
         self.__button[0].image.fill((80, 80, 80))
 
         self.__surface = Surface(SCREEN_SIZE)

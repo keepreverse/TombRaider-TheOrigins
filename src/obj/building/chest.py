@@ -12,7 +12,7 @@ If it was collided be player, it will open and explode the Collectible instances
 
 class Chest(TriggerBuilding):
     def __init__(self, pos, *collectibles):
-        super().__init__(pos, IMAGE['chest'][0], (0, 0), False, False, IMAGE['chest'][2], (0, 0))
+        super().__init__(pos, IMAGE['chest'][0], (0, 0), False, False, IMAGE['chest'][1], (0, 0))
         self.__collectibles = [*collectibles]
         if random.randint(0, 1) == 0:
             self.__collectibles.append(Armor7())
