@@ -1,14 +1,10 @@
 import const
 from src.obj.entity.item.weapon import Weapon
-"""
-The number behind the weapon is it's damage. 
-We didn't design the weapon carefully, their shoot interval time, clip and reload time are the same.
-"""
 
 
 class Glock18(Weapon):
     def __init__(self):
-        super().__init__("Glock 18", const.IMAGE['weapon'][0], 8, 4, 17, 100)
+        super().__init__("Glock 18", const.IMAGE['weapon'][0], 8, 5, 17, 100)
 
     @property
     def information(self):
@@ -17,7 +13,7 @@ class Glock18(Weapon):
 
 class HKUMP(Weapon):
     def __init__(self):
-        super().__init__("HK UMP", const.IMAGE['weapon'][1], 7, 7, 25, 150)
+        super().__init__("HK UMP", const.IMAGE['weapon'][1], 8, 7, 25, 80)
 
     @property
     def information(self):
@@ -26,7 +22,7 @@ class HKUMP(Weapon):
 
 class BenelliNova(Weapon):
     def __init__(self):
-        super().__init__("Benelli Nova", const.IMAGE['weapon'][2], 12, 70, 8, 200)
+        super().__init__("Benelli Nova", const.IMAGE['weapon'][2], 12, 70, 8, 100)
 
     @property
     def information(self):
@@ -35,7 +31,7 @@ class BenelliNova(Weapon):
 
 class AK47(Weapon):
     def __init__(self):
-        super().__init__("AK-47", const.IMAGE['weapon'][3], 10, 10, 30, 140)
+        super().__init__("AK-47", const.IMAGE['weapon'][3], 10, 10, 30, 120)
 
     @property
     def information(self):
@@ -44,7 +40,7 @@ class AK47(Weapon):
 
 class AWP(Weapon):
     def __init__(self):
-        super().__init__("AWP", const.IMAGE['weapon'][4], 20, 100, 5, 250)
+        super().__init__("AWP", const.IMAGE['weapon'][4], 20, 100, 5, 180)
 
     @property
     def information(self):

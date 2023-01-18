@@ -8,7 +8,7 @@ The file store the constant object or variable.
 """
 
 # Screen pixel size.
-SCREEN_SIZE = (1920, 1080)
+SCREEN_SIZE = (1600, 900)
 # Room consist of many tiles. It's one tile's size on pixel.
 TILE_SIZE = (35, 35)
 # The room consist of 20 * 20 tiles on width and height.

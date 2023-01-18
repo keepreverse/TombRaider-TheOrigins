@@ -42,7 +42,7 @@ class Monster(Creature):
         elif random.randint(0, 8) == 0:
             self.__collectibles.append(Armor13())
         # Add the treasure
-        elif random.randint(0, 20) == 0:
+        elif random.randint(0, 50) == 0:
             self.__collectibles.append(Treasure())
 
     @property

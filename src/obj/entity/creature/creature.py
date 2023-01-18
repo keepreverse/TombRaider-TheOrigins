@@ -196,7 +196,6 @@ class Creature(Entity):
 
     def collide_building(self, *buildings):
         # A flag that check whether the entity can move finally like original move.
-        # 标志实体最后能否像最开始那样移动
         can_access = True
 
         for building in buildings:

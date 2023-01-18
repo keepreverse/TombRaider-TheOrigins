@@ -104,7 +104,7 @@ class Map:
                 if len(self.__graph[i][j]) != 0:
                     # Entry room
                     if (i, j) == self.__entry_room_pos:
-                        self.__map[i][j] = RoomEmpty()
+                        self.__map[i][j] = RoomMaze()
                     # End room
                     elif (i, j) in end_rooms:
                         self.__map[i][j] = RoomChest()
