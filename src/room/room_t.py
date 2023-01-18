@@ -11,5 +11,5 @@ class RoomT(Room):
         for i in range(width):
             for j in range(height):
                 if (i == width // 2 and height // 5 <= j <= height * 4 // 5) or \
-                        (j == height // 5 and width // 5 <= i <= width * 4 // 5):
+                        (j == height // 5 and width // 5 <= i <= width * 4 // 5 - 1):
                     self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -12))

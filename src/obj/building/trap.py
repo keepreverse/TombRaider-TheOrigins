@@ -1,11 +1,11 @@
 import const
 import var
 from src.animation.animation_system import AnimationSystem
-from src.buff.buff_slow import BuffSlow
+from src.debuff.debuff_slow import DebuffSlow
 from src.obj.building.trigger_building import TriggerBuilding
 """
 It's the only building who has an animation.
-When it shows the whole spine, it will hurt player and give a slow buff if player walk on it.
+When it shows the whole spine, it will hurt player and give a slow debuff if player walk on it.
 It makes no sense for the monster. 
 """
 
@@ -25,4 +25,4 @@ class Trap(TriggerBuilding):
         if entity != var.player or self.image != const.IMAGE['trap'][3]:
             return
         var.player.take_damage(1)
-        var.player.buff = BuffSlow(100, var.player, 3)
+        var.player.debuff = DebuffSlow(100, var.player, 3)

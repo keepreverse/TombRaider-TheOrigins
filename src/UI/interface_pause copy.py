@@ -21,7 +21,7 @@ from src.UI.image_weapon_background import ImageWeaponBackground
 from src.UI.interface import Interface
 from pygame.surface import Surface
 from src.UI.label_armor import LabelArmorName, LabelArmorDefense
-from src.UI.label_buff import LabelBuffName, LabelBuffTime
+from src.UI.label_debuff import LabelDebuffName, LabelDebuffTime
 from src.UI.label_bullet import LabelBullet
 from src.UI.label_hp import LabelHP
 from src.UI.label_information import LabelInformationName, LabelInformation1, LabelInformation2, LabelInformation3, \
@@ -36,7 +36,7 @@ class PAUSE(Interface):
         self.__profile = [Image((160, 100), Surface((320, 200))),
                           ImagePlayerBackground(),
                           ImagePlayer((80, 100)), LabelHP((160, 55)), LabelBullet((160, 85)),
-                          LabelBuffName((160, 115)), LabelBuffTime((160, 145))]
+                          LabelDebuffName((160, 115)), LabelDebuffTime((160, 145))]
         self.__equipment = [Image((480, 100), Surface((320, 200))),
                             ImageArmorBackground((375, 145)), ImageArmor((375, 145)),
                             ImageWeaponBackground((375, 55)), ImageWeapon((375, 55)),

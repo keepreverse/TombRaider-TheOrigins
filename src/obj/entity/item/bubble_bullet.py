@@ -13,6 +13,6 @@ class BubbleBullet(ShootingBullet):
     def __init__(self, pos, speed_dir, speed_mag, damage, owner):
         image = Surface((9, 9))
         image.set_colorkey((0, 0, 0))
-        draw.circle(image, (250, 45, 40), (4, 4), 4)
+        draw.circle(image, (250, 25, 40), (4, 4), 4)
         vector = Vector(-4, -4)
         super().__init__(Rect(pos[0], pos[1], 3, 3), image, vector, speed_dir, speed_mag, damage, owner)

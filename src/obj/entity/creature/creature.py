@@ -1,11 +1,11 @@
 import var
 from src.animation.animation_system import AnimationSystem
-from src.buff.buff import Buff
+from src.debuff.debuff import Debuff
 from src.obj.building.trigger_building import TriggerBuilding
 from src.obj.entity.entity import Entity
 from src.tool.vector import Vector
 """
-Every creature has health, buff, damage, defense and animation_system.
+Every creature has health, debuff, damage, defense and animation_system.
 Every creature can do attack or take damage.
 """
 
@@ -32,8 +32,8 @@ class Creature(Entity):
         self.__cnt_take_damage = 0
         # The minimum frames two damage taking.
         self.__interval_take_damage = 30
-        # Buff of the creature.
-        self.__buff = None
+        # Debuff of the creature.
+        self.__debuff = None
 
     @property
     def image(self):
@@ -109,16 +109,16 @@ class Creature(Entity):
         self.__health = min(max(value, 0), self.max_health)
 
     @property
-    def buff(self):
-        return self.__buff
+    def debuff(self):
+        return self.__debuff
 
-    @buff.setter
-    def buff(self, value):
-        if value is not None and not isinstance(value, Buff):
-            raise TypeError("Creature.buff must be Buff or None type.")
-        if value is not None and self.buff is not None:
+    @debuff.setter
+    def debuff(self, value):
+        if value is not None and not isinstance(value, Debuff):
+            raise TypeError("Creature.debuff must be Debuff or None type.")
+        if value is not None and self.debuff is not None:
             return
-        self.__buff = value
+        self.__debuff = value
 
     @property
     def is_dead(self):
@@ -136,12 +136,12 @@ class Creature(Entity):
         self.__cnt_take_damage = 0
 
     def update(self):
-        # Update the buff.
-        if self.buff is not None:
-            self.buff.update()
-            if self.buff.time == 0:
-                self.buff.recover()
-                self.buff = None
+        # Update the debuff.
+        if self.debuff is not None:
+            self.debuff.update()
+            if self.debuff.time == 0:
+                self.debuff.recover()
+                self.debuff = None
         # Update the counter for taking damage.
         self.__cnt_take_damage += 1
         # Move and attack

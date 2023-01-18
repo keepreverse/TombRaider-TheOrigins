@@ -20,6 +20,6 @@ class RoomFocus(Room):
                         ((j == height * 2 // 5 or j == height * 3 // 5) and
                          (width // 5 <= i <= width * 2 // 5 or width * 3 // 5 <= i <= width * 4 // 5)):
                     self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -12))
-        self.buildings[const.ROOM_SIZE[0] // 2][const.ROOM_SIZE[1] // 2] = \
-            Chest((const.ROOM_SIZE[0] // 2, const.ROOM_SIZE[1] // 2),
+        self.buildings[const.ROOM_SIZE[0] // 2][const.ROOM_SIZE[1] // 2 - 1] = \
+            Chest((const.ROOM_SIZE[0] // 2, const.ROOM_SIZE[1] // 2 - 1),
                   Bullet(random.randint(1, 4) * 10), Potion(random.randint(1, 3)), Key(random.randint(1, 2)))

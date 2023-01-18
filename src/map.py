@@ -131,7 +131,7 @@ class Map:
         if self.__end_room_pos is None:
             end_room = end_rooms[random.randint(0, len(end_rooms) - 1)]
             self.__end_room_pos = end_room
-        self.end_room.buildings[ROOM_SIZE[0] // 2][ROOM_SIZE[1] // 2].collectibles.append(Treasure())
+        self.end_room.buildings[ROOM_SIZE[0] // 2][ROOM_SIZE[1] // 2 - 1].collectibles.append(Treasure())
         # Add a destination into the entry.
         self.entry_room.buildings[DOOR_POS['up'][0]][DOOR_POS['up'][1]] = Destination(DOOR_POS['up'])
         return True
