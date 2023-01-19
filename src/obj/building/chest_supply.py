@@ -3,31 +3,15 @@ import var
 from const import IMAGE
 from src.obj.building.trigger_building import TriggerBuilding
 from src.tool.vector import Vector
-from src.obj.entity.item.weapons import BenelliNova, AK47, AWP
-from src.obj.entity.item.armor5_15 import Armor11, Armor13, Armor15
 """
 If it was collided be player, it will open and explode the Collectible instances.
 """
 
 
-class Chest(TriggerBuilding):
+class ChestSupply(TriggerBuilding):
     def __init__(self, pos, *collectibles):
         super().__init__(pos, IMAGE['chest'][0], (0, 0), False, False, IMAGE['chest'][1], (0, 0))
         self.__collectibles = [*collectibles]
-        if random.randint(0, 1) == 0:
-            if random.randint(0, 3) == 0:
-                self.__collectibles.append(Armor11())
-            elif random.randint(0, 2) == 0:
-                self.__collectibles.append(Armor13())
-            else:
-                self.__collectibles.append(Armor15())
-        else:
-            if random.randint(0, 3) == 0:
-                self.__collectibles.append(AK47())
-            elif random.randint(0, 2) == 0:
-                self.__collectibles.append(BenelliNova())
-            else:
-                self.__collectibles.append(AWP())
 
     @property
     def collectibles(self):

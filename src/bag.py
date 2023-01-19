@@ -13,13 +13,13 @@ All the operation of the bag is in O(n) time complexity.
 
 class Bag:
     def __init__(self):
-        self.__items = [Glock18(), HKUMP(), BenelliNova(), AK47(), Bullet(107), Key(2), Potion(1)]
+        self.__items = [Bullet(107), Key(2), Potion(1)]
         self.__has_bullet = True
         self.__has_key = True
         self.__has_treasure = False
         self.active_item_id = 0
         # Initial weapon the armor.
-        self.weapon = AWP()
+        self.weapon = AK47()
         self.armor = Armor5()
 
     @property

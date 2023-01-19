@@ -20,7 +20,7 @@ class Monster(Creature):
         super().__init__(rect, animation_system, speed_mag, max_health, defense, damage)
         self.collectibles = [*collectibles]
         # Add the drop bullet and potion
-        self.collectibles.append(Bullet(random.randint(1, 3) * 10))
+        self.collectibles.append(Bullet(random.randint(2, 3) * 12))
         if random.randint(0, 1) == 0:
             self.collectibles.append(Potion())
         # Add the drop weapon

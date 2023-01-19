@@ -4,7 +4,7 @@ from src.obj.entity.item.weapon import Weapon
 
 class Glock18(Weapon):
     def __init__(self):
-        super().__init__("Glock 18", const.IMAGE['weapon'][0], 8, 5, 17, 100)
+        super().__init__("Glock 18", const.IMAGE['weapon'][0], 8, 4.5, 17, 100)
 
     @property
     def information(self):
@@ -13,7 +13,7 @@ class Glock18(Weapon):
 
 class HKUMP(Weapon):
     def __init__(self):
-        super().__init__("HK UMP", const.IMAGE['weapon'][1], 8, 7, 25, 80)
+        super().__init__("HK UMP", const.IMAGE['weapon'][1], 8, 8, 25, 80)
 
     @property
     def information(self):
@@ -31,7 +31,7 @@ class BenelliNova(Weapon):
 
 class AK47(Weapon):
     def __init__(self):
-        super().__init__("AK-47", const.IMAGE['weapon'][3], 10, 10, 30, 120)
+        super().__init__("AK-47", const.IMAGE['weapon'][3], 8, 11, 30, 120)
 
     @property
     def information(self):
@@ -40,7 +40,7 @@ class AK47(Weapon):
 
 class AWP(Weapon):
     def __init__(self):
-        super().__init__("AWP", const.IMAGE['weapon'][4], 20, 100, 5, 180)
+        super().__init__("AWP", const.IMAGE['weapon'][4], 20, 100, 5, 160)
 
     @property
     def information(self):

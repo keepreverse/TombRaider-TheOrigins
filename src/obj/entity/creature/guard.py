@@ -13,9 +13,9 @@ It will dash to the player but not change it's direction until the dash is ended
 class Guard(Monster):
     def __init__(self, pos, *collectibles):
         super().__init__(Rect(pos[0] * TILE_SIZE[0], pos[1] * TILE_SIZE[1], 28, 18),
-                         AnimationSystem(**const.ANIMATION_REPOSITORY.animations['guard']), 3, 18, 5, 3, *collectibles)
+                         AnimationSystem(**const.ANIMATION_REPOSITORY.animations['guard']), 3, 18, 4, 3, *collectibles)
         self.rect.center = self.rect.left_top + Vector(TILE_SIZE[0] / 2, TILE_SIZE[1] / 2)
-        self.move_interval = 250
+        self.move_interval = 210
         self.move_time = 0
         self.Vector = Vector(0, 0)
 
