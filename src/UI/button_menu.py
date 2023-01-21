@@ -1,11 +1,13 @@
 import var
 import const
-from const import Init, SOUND
+import pygame
+from const import Init, SOUND, SCREEN_SIZE
+
 from src.UI.button import Button
 
 class ButtonMenu(Button):
     def __init__(self, center):
-        super().__init__(center, None, const.IMAGE['start'][8], const.IMAGE['start'][9])
+        super().__init__(center, None, pygame.transform.scale(const.IMAGE['start'][8], (SCREEN_SIZE[0] / 4.5, SCREEN_SIZE[1] / 20)), pygame.transform.scale(const.IMAGE['start'][9], (SCREEN_SIZE[0] / 4.5, SCREEN_SIZE[1] / 20)))
 
     def on_available(self):
         self.image = self.images[1]
@@ -16,4 +18,4 @@ class ButtonMenu(Button):
     def on_click(self):
         self.image = self.images[1]
         var.interface = var.start
-        Init.init_music(SOUND, "menu", 0.2)
+        Init.init_music(SOUND, "menu", 0.1)

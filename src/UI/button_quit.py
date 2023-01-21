@@ -1,11 +1,13 @@
 import var
 import const
+import pygame
+from const import SCREEN_SIZE
 from src.UI.button import Button
 
 
 class ButtonQuit(Button):
     def __init__(self, center):
-        super().__init__(center, None, const.IMAGE['start'][2], const.IMAGE['start'][6])
+        super().__init__(center, None, pygame.transform.scale(const.IMAGE['start'][2], (SCREEN_SIZE[0] / 15, SCREEN_SIZE[1] / 20)), pygame.transform.scale(const.IMAGE['start'][6], (SCREEN_SIZE[0] / 15, SCREEN_SIZE[1] / 20)))
 
     def on_available(self):
         self.image = self.images[1]

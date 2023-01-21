@@ -25,7 +25,7 @@ class Player(Creature):
         
         self.shoot_glock18 = pygame.mixer.Sound('data/music/glock18.mp3')
         self.shoot_ump = pygame.mixer.Sound('data/music/ump.mp3')
-        self.shoot_nova = pygame.mixer.Sound('data/music/nova.mp3')
+        self.shoot_sawedoff = pygame.mixer.Sound('data/music/sawedoff.mp3')
         self.shoot_ak47 = pygame.mixer.Sound('data/music/ak47.mp3')
         self.shoot_awp = pygame.mixer.Sound('data/music/awp.mp3')
 
@@ -123,15 +123,15 @@ class Player(Creature):
             shooting_bullet = var.bag.weapon.shoot(self.rect.center, self.shoot_dir, self)
             if shooting_bullet is not None:
                 if var.bag.weapon.name == "Glock 18":
-                    self.shoot_glock18.play().set_volume(0.2)
+                    self.shoot_glock18.play().set_volume(0.1)
                 elif var.bag.weapon.name == "HK UMP":
                     self.shoot_ump.play().set_volume(0.2)
-                elif var.bag.weapon.name == "Benelli Nova":
-                    self.shoot_nova.play().set_volume(0.1)
+                elif var.bag.weapon.name == "Sawed Off":
+                    self.shoot_sawedoff.play().set_volume(0.1)
                 elif var.bag.weapon.name == "AK-47":
                     self.shoot_ak47.play().set_volume(0.2)
                 elif var.bag.weapon.name == "AWP":
-                    self.shoot_awp.play().set_volume(0.2)
+                    self.shoot_awp.play().set_volume(0.12)
                 var.map.active_room.entities.append(shooting_bullet)
 
 

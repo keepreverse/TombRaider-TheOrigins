@@ -4,7 +4,7 @@ from src.obj.entity.item.weapon import Weapon
 
 class Glock18(Weapon):
     def __init__(self):
-        super().__init__("Glock 18", const.IMAGE['weapon'][0], 8, 4.5, 17, 100)
+        super().__init__("Glock 18", const.IMAGE['weapon'][0], 7, 4.8, 17, 100)
 
     @property
     def information(self):
@@ -20,13 +20,13 @@ class HKUMP(Weapon):
         return '    Heckler & Koch UMP. my girlfriend sent me when i 19 years old, it has 10 points of damage.'
 
 
-class BenelliNova(Weapon):
+class SawedOff(Weapon):
     def __init__(self):
-        super().__init__("Benelli Nova", const.IMAGE['weapon'][2], 12, 70, 8, 100)
+        super().__init__("Sawed Off", const.IMAGE['weapon'][2], 12, 70, 8, 130)
 
     @property
     def information(self):
-        return '    Benelli Nova. my dad sent me when i 25 years old, it has 12 points of damage.'
+        return '    Sawed Off. my dad sent me when i 25 years old, it has 12 points of damage.'
 
 
 class AK47(Weapon):

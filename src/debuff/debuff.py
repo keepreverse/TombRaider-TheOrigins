@@ -1,6 +1,6 @@
 """
 Only creature has the debuff instance.
-It's an abstract base class, you should not add it to the creature directly.
+It's an abstract base class.
 Update() should be called every frame.
 """
 

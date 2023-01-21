@@ -4,7 +4,7 @@ from src.room.room import Room
 from const import ROOM_SIZE
 
 
-class RoomChest(Room):
+class RoomTreasure(Room):
     def init_buildings(self):
         super().init_buildings()
         self.buildings[ROOM_SIZE[0] // 2][ROOM_SIZE[1] // 2 - 1] = \

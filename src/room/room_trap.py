@@ -11,14 +11,14 @@ class RoomTrap(Room):
         height = const.ROOM_SIZE[1] - 6
         for i in range(width // 6, width * 2 // 6 + 1):
             for j in range(height // 6, height * 2 // 6 + 1):
-                self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -12))
+                self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -2))
             for j in range(height * 4 // 6, height * 5 // 6 + 1):
-                self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -12))
+                self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -2))
         for i in range(width * 4 // 6, width * 5 // 6 + 1):
             for j in range(height // 6, height * 2 // 6 + 1):
-                self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -12))
+                self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -2))
             for j in range(height * 4 // 6, height * 5 // 6 + 1):
-                self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -12))
+                self.buildings[i + 3][j + 3] = Wall((i + 3, j + 3), const.IMAGE['wall'][5], (0, -2))
         for i in range(width * 2 // 6 + 1, width * 4 // 6):
             j = height * 2 // 6 + 1
             self.buildings[i + 3][j + 3] = Trap((i + 3, j + 3))

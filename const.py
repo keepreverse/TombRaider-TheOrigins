@@ -8,7 +8,7 @@ The file store the constant object or variable.
 """
 
 # Screen pixel size.
-SCREEN_SIZE = (1600, 900)
+SCREEN_SIZE = (1920, 1080)
 # Room consist of many tiles. It's one tile's size on pixel.
 TILE_SIZE = (35, 35)
 # The room consist of 20 * 20 tiles on width and height.
@@ -76,7 +76,7 @@ var.screen = pygame.display.set_mode(SCREEN_SIZE)
 init = Init()
 init.init_obj('ground', 8)
 init.init_obj('wall', 6, is_alpha=True)
-init.init_obj('chest', 2)
+init.init_obj('chest', 6)
 init.init_obj('potion', 1, is_alpha=True)
 init.init_obj('trap', 6)
 init.init_obj('door', 6, is_alpha=True)
@@ -90,5 +90,5 @@ init.init_creature(IMAGE, LEGAL_STATE, "player", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "guard", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "mummy", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "pharaoh", 2)
-Init.init_music(SOUND, "menu", 0.2)
+Init.init_music(SOUND, "menu", 0.1)
 ANIMATION_REPOSITORY = AnimationRepository()

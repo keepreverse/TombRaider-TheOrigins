@@ -1,5 +1,3 @@
-from pygame.font import SysFont
-
 import var
 from src.UI.label import Label
 

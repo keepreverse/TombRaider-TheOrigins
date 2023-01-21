@@ -1,6 +1,6 @@
 from src.obj.building.building import Building
 """
-Any entity can't can through it.
+Any entity can't walk through it.
 """
 
 

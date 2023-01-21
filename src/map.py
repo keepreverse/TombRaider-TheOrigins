@@ -8,10 +8,10 @@ from src.obj.building.door import Door
 from src.obj.entity.item.treasure import Treasure
 from src.room.room_empty import RoomEmpty
 from src.room.room_path import RoomPath
-from src.room.room_focus import RoomFocus
+from src.room.room_supply import RoomSupply
 from src.room.room_maze import RoomMaze
 from src.room.room_square import RoomSquare
-from src.room.room_chest import RoomChest
+from src.room.room_treasure import RoomTreasure
 from src.room.room_h import RoomH
 from src.room.room_t import RoomT
 from src.room.room_x import RoomX
@@ -26,8 +26,8 @@ It switch the room for player.
 
 class Map:
     # The all kinds of room can choose
-    __ROOM_KIND = [RoomEmpty, RoomChest, RoomTrap, RoomT, RoomX,
-                   RoomH, RoomFocus, RoomSquare, RoomMaze, RoomPath, RoomWall]
+    __ROOM_KIND = [RoomEmpty, RoomTreasure, RoomTrap, RoomT, RoomX,
+                   RoomH, RoomSupply, RoomSquare, RoomMaze, RoomPath, RoomWall]
 
     def __init__(self):
         # If the room number is less than 20, then create another new map again.
@@ -104,10 +104,10 @@ class Map:
                 if len(self.__graph[i][j]) != 0:
                     # Entry room
                     if (i, j) == self.__entry_room_pos:
-                        self.__map[i][j] = RoomMaze()
+                        self.__map[i][j] = RoomEmpty()
                     # End room
                     elif (i, j) in end_rooms:
-                        self.__map[i][j] = RoomChest()
+                        self.__map[i][j] = RoomTreasure()
                     # Other room
                     else:
                         self.__map[i][j] = Map.__ROOM_KIND[random.randint(2, 10)]()
@@ -131,7 +131,7 @@ class Map:
         if self.__end_room_pos is None:
             end_room = end_rooms[random.randint(0, len(end_rooms) - 1)]
             self.__end_room_pos = end_room
-        self.end_room.buildings[ROOM_SIZE[0] // 2][ROOM_SIZE[1] // 2 - 1].collectibles.append(Treasure())
+        # self.end_room.buildings[ROOM_SIZE[0] // 2][ROOM_SIZE[1] // 2 - 1].collectibles.append(Treasure())
         # Add a destination into the entry.
         self.entry_room.buildings[DOOR_POS['up'][0]][DOOR_POS['up'][1]] = Destination(DOOR_POS['up'])
         return True

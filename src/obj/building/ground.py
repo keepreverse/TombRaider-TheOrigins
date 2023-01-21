@@ -1,7 +1,7 @@
 from src.obj.building.building import Building
 from src.tool.vector import Vector
 """
-Just a ground, not any special.
+Just a ground.
 """
 
 

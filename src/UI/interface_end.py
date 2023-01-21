@@ -6,4 +6,4 @@ from src.UI.button_menu import ButtonMenu
 class END(Interface):
     def __init__(self):
         super().__init__(ImageEnd((SCREEN_SIZE[0]/2, SCREEN_SIZE[1]/2)),
-                         ButtonMenu((290, SCREEN_SIZE[1] - 70)))
+                         ButtonMenu((SCREEN_SIZE[0]/7.2, SCREEN_SIZE[1] - 80)))

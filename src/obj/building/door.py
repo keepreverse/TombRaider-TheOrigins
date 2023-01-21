@@ -32,4 +32,3 @@ class Door(TriggerBuilding):
                     self.can_access = True
                     self.image = self.new_image
                     self.vector = self.new_vector
-

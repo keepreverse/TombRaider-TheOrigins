@@ -4,7 +4,7 @@ from src.obj.entity.item.bullet import Bullet
 from src.obj.entity.item.key import Key
 from src.obj.entity.item.potion import Potion
 from src.obj.entity.item.weapon import Weapon
-from src.obj.entity.item.weapons import Glock18, HKUMP, BenelliNova, AK47, AWP
+from src.obj.entity.item.weapons import Glock18, HKUMP, SawedOff, AK47, AWP
 """
 The bag.
 All the operation of the bag is in O(n) time complexity.
@@ -19,7 +19,7 @@ class Bag:
         self.__has_treasure = False
         self.active_item_id = 0
         # Initial weapon the armor.
-        self.weapon = AK47()
+        self.weapon = Glock18()
         self.armor = Armor5()
 
     @property

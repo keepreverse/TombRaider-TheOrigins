@@ -1,13 +1,13 @@
 import random
 import var
-from src.obj.entity.creature.creature import Creature
-from src.obj.entity.item.bullet import Bullet
-from src.obj.entity.item.collectible import Collectible
-from src.obj.entity.item.potion import Potion
-from src.obj.entity.item.shooting_bullet import ShootingBullet
 from src.tool.vector import Vector
-from src.obj.entity.item.weapons import Glock18, HKUMP, BenelliNova, AK47
+from src.obj.entity.creature.creature import Creature
+from src.obj.entity.item.collectible import Collectible
+from src.obj.entity.item.shooting_bullet import ShootingBullet
+from src.obj.entity.item.weapons import Glock18, HKUMP, SawedOff, AK47
 from src.obj.entity.item.armor5_15 import Armor7, Armor9, Armor11, Armor13
+from src.obj.entity.item.bullet import Bullet
+from src.obj.entity.item.potion import Potion
 from src.obj.entity.item.treasure import Treasure
 """
 It will attack the player.
@@ -18,20 +18,20 @@ It will drop the Collectible instances when they are killed.
 class Monster(Creature):
     def __init__(self, rect, animation_system, speed_mag, max_health, defense, damage, *collectibles):
         super().__init__(rect, animation_system, speed_mag, max_health, defense, damage)
-        self.collectibles = [*collectibles]
+        self.__collectibles = [*collectibles]
         # Add the drop bullet and potion
-        self.collectibles.append(Bullet(random.randint(2, 3) * 12))
+        self.__collectibles.append(Bullet(random.randint(2, 3) * 8))
         if random.randint(0, 1) == 0:
-            self.collectibles.append(Potion())
+            self.__collectibles.append(Potion())
         # Add the drop weapon
         if random.randint(0, 4) == 0:
-            self.collectibles.append(Glock18())
+            self.__collectibles.append(Glock18())
         elif random.randint(0, 4) == 0:
-            self.collectibles.append(HKUMP())
+            self.__collectibles.append(HKUMP())
         elif random.randint(0, 6) == 0:
-            self.collectibles.append(BenelliNova())
+            self.__collectibles.append(SawedOff())
         elif random.randint(0, 8) == 0:
-            self.collectibles.append(AK47())
+            self.__collectibles.append(AK47())
         # Add the drop armor
         if random.randint(0, 4) == 0:
             self.__collectibles.append(Armor7())
@@ -60,7 +60,7 @@ class Monster(Creature):
         super().update()
         # If it is killed, the Collectible instances drop
         if self.is_dead:
-            for collectible in self.collectibles:
+            for collectible in self.__collectibles:
                 collectible.explode(self.rect.center, Vector.random_normalized_vector())
                 var.map.active_room.entities.append(collectible)
 
