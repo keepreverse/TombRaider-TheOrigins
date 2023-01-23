@@ -11,7 +11,7 @@ class ImageWeapon(Image):
 
     @property
     def image(self):
-        if var.bag.weapon is not None:
+        if var.bag.weapon != None:
             return var.bag.weapon.image
         else:
             return None

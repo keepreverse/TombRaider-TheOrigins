@@ -24,17 +24,17 @@ class Button(Component):
 
     @image.setter
     def image(self, value):
-        if value is not None and not isinstance(value, Surface):
+        if value != None and not isinstance(value, Surface):
             raise TypeError("Component.image must be Surface type.")
         center = self.rect.center
-        if value is None:
+        if value == None:
             self.__image = None
             self.rect.size = self.mysize
         else:
             self.__image = value.copy()
             self.rect.size = self.__image.get_size()
         self.rect.center = center
-        if self.label is not None:
+        if self.label != None:
             self.label.draw(self.__image)
 
     @property
@@ -43,7 +43,7 @@ class Button(Component):
 
     @label.setter
     def label(self, value):
-        if value is not None and not isinstance(value, Label):
+        if value != None and not isinstance(value, Label):
             raise TypeError("Button.label must be Label type.")
         self.__label = value
 

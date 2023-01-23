@@ -114,9 +114,9 @@ class Creature(Entity):
 
     @debuff.setter
     def debuff(self, value):
-        if value is not None and not isinstance(value, Debuff):
+        if value != None and not isinstance(value, Debuff):
             raise TypeError("Creature.debuff must be Debuff or None type.")
-        if value is not None and self.debuff is not None:
+        if value != None and self.debuff != None:
             return
         self.__debuff = value
 
@@ -137,7 +137,7 @@ class Creature(Entity):
 
     def update(self):
         # Update the debuff.
-        if self.debuff is not None:
+        if self.debuff != None:
             self.debuff.update()
             if self.debuff.time == 0:
                 self.debuff.recover()

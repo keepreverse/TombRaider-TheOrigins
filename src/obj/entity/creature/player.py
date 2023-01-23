@@ -121,7 +121,7 @@ class Player(Creature):
     def attack(self):
         if self.__space or self.__b1:
             shooting_bullet = var.bag.weapon.shoot(self.rect.center, self.shoot_dir, self)
-            if shooting_bullet is not None:
+            if shooting_bullet != None:
                 if var.bag.weapon.name == "Desert Eagle":
                     self.shoot_deagle.play().set_volume(0.35)
                 elif var.bag.weapon.name == "HK UMP":

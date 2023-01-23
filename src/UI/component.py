@@ -22,10 +22,10 @@ class Component:
 
     @image.setter
     def image(self, value):
-        if value is not None and not isinstance(value, Surface):
+        if value != None and not isinstance(value, Surface):
             raise TypeError("Component.image must be Surface type.")
         center = self.rect.center
-        if value is None:
+        if value == None:
             self.__image = None
             self.rect.size = (0, 0)
         else:
@@ -50,7 +50,7 @@ class Component:
         self.__rect = Rect.init_one_arg(value)
 
     def draw(self, surface):
-        if self.image is not None:
+        if self.image != None:
             surface.blit(self.image, (int(self.rect.left), int(self.rect.top)))
 
     def update(self):

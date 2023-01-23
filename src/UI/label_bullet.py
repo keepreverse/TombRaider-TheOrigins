@@ -9,7 +9,7 @@ class LabelBullet(Label):
         super().__init__(left_center, "", size=30, is_left_center=True)
 
     def update(self):
-        if var.player is not None:
+        if var.player != None:
             if var.bag.weapon.remain >= 10:
                 self.text = 'Bullet:   ' + str(var.bag.weapon.remain) + ' / ' + str(var.bag.weapon.clip)
             else:

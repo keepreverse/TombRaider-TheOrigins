@@ -201,7 +201,7 @@ class Room:
         for j in range(ROOM_SIZE[1]):
             # draw the buildings
             for i in range(ROOM_SIZE[0]):
-                if self.buildings[i][j] is not None:
+                if self.buildings[i][j] != None:
                     self.buildings[i][j].draw(self.__surface)
             # draw the entities
             while cnt < len(self.entities) and self.entities[cnt].rect.bottom // TILE_SIZE[1] == j:

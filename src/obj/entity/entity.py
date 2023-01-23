@@ -65,22 +65,22 @@ class Entity(Obj):
 
     @next_move.setter
     def next_move(self, value):
-        if value is None:
+        if value == None:
             self.__next_move = None
         else:
             self.__next_move = Vector.init_one_arg(value)
 
     def move(self, delta_pos=None):
         """
-        If delta_pos is not None, it will move by the delta_pos.
-        Else if the next_move is not None, it will move by the next_move.
+        If delta_pos != None, it will move by the delta_pos.
+        Else if the next_move != None, it will move by the next_move.
         Else move according to the speed_dir and speed_mag.
         :param delta_pos: Vector. The specified delta_pos
         :return:
         """
-        if delta_pos is not None:
+        if delta_pos != None:
             self.__delta_pos = Vector.init_one_arg(delta_pos)
-        elif self.next_move is not None:
+        elif self.next_move != None:
             self.__delta_pos = self.next_move
             self.next_move = None
         else:

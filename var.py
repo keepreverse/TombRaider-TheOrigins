@@ -29,4 +29,4 @@ player = None
 # Bag
 bag = None
 # int
-enemies_number = 4
+enemies_number = 3

@@ -22,7 +22,7 @@ class HKUMP(Weapon):
 
 class SawedOff(Weapon):
     def __init__(self):
-        super().__init__("Sawed Off", const.IMAGE['weapon'][2], 11, 70, 8, 130)
+        super().__init__("Sawed Off", const.IMAGE['weapon'][2], 12, 70, 8, 130)
 
     @property
     def information(self):

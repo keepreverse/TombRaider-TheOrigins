@@ -13,19 +13,28 @@ class FoodBuff(Collectible):
         super().__init__(name, image, True, amount)
 
     @property
+    def can_use(self):
+        return (var.player.debuff != None and var.player.debuff.name == "Changed (-2 points)" or var.player.debuff == None)
+
+
+    @can_use.setter
+    def can_use(self, value):
+        pass
+    
+    @property
     def debuff(self):
         return self.__debuff
 
     @debuff.setter
     def debuff(self, value):
-        if value is not None and not isinstance(value, Debuff):
+        if value != None and not isinstance(value, Debuff):
             raise TypeError("Creature.debuff must be Debuff or None type.")
-        if value is not None and var.player.debuff is not None:
+        if value != None and var.player.debuff != None:
             return
         self.__debuff = value
 
     def use(self):
-        if var.player.debuff is not None:
+        if var.player.debuff != None:
             if var.player.debuff.name == "Changed (3 points)":
                 return
             if var.player.debuff.name == "Changed (-2 points)":
@@ -34,8 +43,4 @@ class FoodBuff(Collectible):
                 super().use()
                 return
         super().use()
-<<<<<<< HEAD
         var.player.debuff = DebuffSlow(600, var.player, 3)
-=======
-        var.player.debuff = DebuffSlow(500, var.player, 4)
->>>>>>> 128ab71703bab26756f3ed8a7c34ef5cea7a8f50

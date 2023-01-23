@@ -29,7 +29,7 @@ class Debuff:
         return self.__creature
 
     def update(self):
-        if self.creature is None or self.time == 0:
+        if self.creature == None or self.time == 0:
             return
         if self.__flag:
             self.__flag = False

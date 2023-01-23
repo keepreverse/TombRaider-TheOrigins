@@ -30,7 +30,7 @@ class ShootingBullet(Item):
 
     @owner.setter
     def owner(self, value):
-        if value is not None and not isinstance(value, Creature):
+        if value != None and not isinstance(value, Creature):
             raise TypeError("ShootingBullet.owner must be Creature or None type.")
         self.__owner = value
 

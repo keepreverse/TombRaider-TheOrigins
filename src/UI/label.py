@@ -16,7 +16,7 @@ class Label(Component):
         self.background = background
         self.__text = ''
         self.text = text
-        if self.image is not None:
+        if self.image != None:
             self.rect.size = self.image.get_size()
             if not self.is_left_center:
                 self.rect.center = center
@@ -53,7 +53,7 @@ class Label(Component):
 
     @image.setter
     def image(self, value):
-        if value is not None and not isinstance(value, Surface):
+        if value != None and not isinstance(value, Surface):
             raise TypeError("Label.image must be Surface or None type.")
         self.__image = value
 

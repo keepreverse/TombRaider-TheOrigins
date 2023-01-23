@@ -104,7 +104,7 @@ class Map:
                 if len(self.__graph[i][j]) != 0:
                     # Entry room
                     if (i, j) == self.__entry_room_pos:
-                        self.__map[i][j] = RoomTreasure()
+                        self.__map[i][j] = RoomSupply()
                     # End room
                     elif (i, j) in end_rooms:
                         self.__map[i][j] = RoomTreasure()
@@ -128,7 +128,7 @@ class Map:
         for end_room in end_rooms:
             if end_room[1] >= MAP_SIZE[1] // 2:
                 self.__end_room_pos = end_room
-        if self.__end_room_pos is None:
+        if self.__end_room_pos == None:
             end_room = end_rooms[random.randint(0, len(end_rooms) - 1)]
             self.__end_room_pos = end_room
         # self.end_room.buildings[ROOM_SIZE[0] // 2][ROOM_SIZE[1] // 2 - 1].collectibles.append(Treasure())

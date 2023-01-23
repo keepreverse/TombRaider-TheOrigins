@@ -7,7 +7,7 @@ class LabelBulletBar(Label):
         super().__init__(center, "", size=23)
 
     def update(self):
-        if var.player is not None:
+        if var.player != None:
             if var.bag.weapon.remain:
                 self.text = str(var.bag.weapon.remain) + ' / ' + str(var.bag.weapon.clip)
             else:

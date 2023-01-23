@@ -7,5 +7,5 @@ class ProgressBarHP(ProgressBar):
         super().__init__(center, (100, 20), 100, active_color=(225, 0, 0))
 
     def update(self):
-        if var.player is not None:
+        if var.player != None:
             self.progress = round(var.player.health / var.player.max_health * self.length)

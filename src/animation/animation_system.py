@@ -21,14 +21,14 @@ class AnimationSystem:
 
     @property
     def image(self):
-        if self.__animation is None:
+        if self.__animation == None:
             raise ValueError("AnimationSystem animation is empty.")
         else:
             return self.__animation.images[self.__now]
 
     @property
     def vector(self):
-        if self.__animation is None:
+        if self.__animation == None:
             raise ValueError("AnimationSystem animation is empty.")
         else:
             return self.__animation.vectors[self.__now]
@@ -49,7 +49,7 @@ class AnimationSystem:
         """
         if not isinstance(animation_name, str) or not isinstance(animation, Animation):
             raise TypeError("AnimationSystem.add_animation name: str, animation: animation")
-        if self.__animations[animation_name] is not None:
+        if self.__animations[animation_name] != None:
             raise Exception("AnimationSystem %s animation is already exist." % animation_name)
         self.__animations[animation_name] = animation
 
@@ -60,7 +60,7 @@ class AnimationSystem:
         :param animation_name: str
         :return:
         """
-        if self.__animations[animation_name] is None:
+        if self.__animations[animation_name] == None:
             raise ValueError("AnimationSystem %s animation is not exist." % animation_name)
         if self.__animation_name != animation_name:
             self.__animation = self.__animations[animation_name]
@@ -81,7 +81,7 @@ class AnimationSystem:
         It should be called every frame.
         :return:
         """
-        if self.__animation is None:
+        if self.__animation == None:
             return
         if self.__animation.total_frames == 0:
             raise Exception("AnimationSystem animation not initialized.")

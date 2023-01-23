@@ -63,11 +63,11 @@ class QuadTree:
         collide_child = self.__collide_child(entity)
         # If the entity can't put into any one of the children.
         # Then put into this node.
-        if collide_child is None:
+        if collide_child == None:
             self.__entities.append(entity)
             return
         # If the children not create.
-        if self.__children is None:
+        if self.__children == None:
             # If the number of the entities greater or equal to the capacity of one node.
             if len(self.__entities) >= ENTITY_CAPACITY:
                 self.__children = [QuadTree(self.left_top_rect), QuadTree(self.right_top_rect),
@@ -77,7 +77,7 @@ class QuadTree:
                 # Put the original entities in this node into the child if they can.
                 for entity in self.__entities:
                     collide_child = self.__collide_child(entity)
-                    if collide_child is not None:
+                    if collide_child != None:
                         self.__children[collide_child].add(entity)
                         self.__entities.remove(entity)
             # Put into this node.
@@ -94,10 +94,10 @@ class QuadTree:
         :return: [Entity]
         """
         entities = []
-        if self.__children is not None:
+        if self.__children != None:
             collide_child = self.__collide_child(entity)
             # If it collide with not only one child.
-            if collide_child is None:
+            if collide_child == None:
                 # Check the child and add the entities.
                 if entity.rect.left < self.rect.center_x:
                     if entity.rect.top < self.rect.center_y:
@@ -117,7 +117,7 @@ class QuadTree:
 
     def __get_all_entities(self):
         entities = []
-        if self.__children is not None:
+        if self.__children != None:
             for child in self.__children:
                 entities += child.__get_all_entities()
         entities += self.__entities

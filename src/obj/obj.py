@@ -32,7 +32,7 @@ class Obj:
 
     @image.setter
     def image(self, value):
-        if value is not None and not isinstance(value, Surface):
+        if value != None and not isinstance(value, Surface):
             raise TypeError("Obj.image must be Surface or None type.")
         self.__image = value
 
@@ -45,5 +45,5 @@ class Obj:
         self.__vector = Vector(value[0], value[1])
 
     def draw(self, surface):
-        if self.image is not None:
+        if self.image != None:
             surface.blit(self.image, (int(self.rect.left + self.vector[0]), int(self.rect.top + self.vector[1])))

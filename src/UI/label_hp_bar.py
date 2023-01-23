@@ -7,5 +7,5 @@ class LabelHPBar(Label):
         super().__init__(center, "", size=23)
 
     def update(self):
-        if var.player is not None:
+        if var.player != None:
             self.text = str(var.player.health) + ' / ' + str(var.player.max_health)
