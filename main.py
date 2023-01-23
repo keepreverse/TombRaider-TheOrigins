@@ -6,9 +6,6 @@ from src.UI.interface_play import PLAY
 from src.UI.interface_death import DEATH
 from src.UI.interface_end import END
 from src.tool.vector import Vector
-"""
-The entry of the program
-"""
 
 
 if __name__ == '__main__':

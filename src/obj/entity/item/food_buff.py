@@ -26,7 +26,7 @@ class FoodBuff(Collectible):
 
     def use(self):
         if var.player.debuff is not None:
-            if var.player.debuff.name == "Changed (2 points)":
+            if var.player.debuff.name == "Changed (3 points)":
                 return
             if var.player.debuff.name == "Changed (-2 points)":
                 var.player.debuff.recover()
@@ -34,4 +34,4 @@ class FoodBuff(Collectible):
                 super().use()
                 return
         super().use()
-        var.player.debuff = DebuffSlow(500, var.player, 2)
+        var.player.debuff = DebuffSlow(600, var.player, 3)

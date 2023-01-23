@@ -20,7 +20,7 @@ class Pharaoh(Monster):
         self.move_interval = 200
         self.move_time = 0
         self.Vector = Vector(0, 0)
-        self.shoot_interval = 90
+        self.shoot_interval = 80
         self.shoot_time = 0
         self.shoot_damage = 2
 

@@ -15,7 +15,7 @@ class Guard(Monster):
         super().__init__(Rect(pos[0] * TILE_SIZE[0], pos[1] * TILE_SIZE[1], 28, 18),
                          AnimationSystem(**const.ANIMATION_REPOSITORY.animations['guard']), 3, 16, 6, 3, *collectibles)
         self.rect.center = self.rect.left_top + Vector(TILE_SIZE[0] / 2, TILE_SIZE[1] / 2)
-        self.move_interval = 210
+        self.move_interval = 200
         self.move_time = 0
         self.Vector = Vector(0, 0)
 
