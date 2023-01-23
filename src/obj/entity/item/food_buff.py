@@ -34,4 +34,4 @@ class FoodBuff(Collectible):
                 super().use()
                 return
         super().use()
-        var.player.debuff = DebuffSlow(500, var.player, 2)
+        var.player.debuff = DebuffSlow(500, var.player, 4)
