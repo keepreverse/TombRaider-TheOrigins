@@ -10,5 +10,7 @@ class LabelBullet(Label):
 
     def update(self):
         if var.player is not None:
-            self.text = 'Bullet: ' + str(var.bag.weapon.remain) + ' / ' + str(var.bag.weapon.clip)
-            return ''
+            if var.bag.weapon.remain >= 10:
+                self.text = 'Bullet:   ' + str(var.bag.weapon.remain) + ' / ' + str(var.bag.weapon.clip)
+            else:
+                self.text = 'Bullet:    ' + str(var.bag.weapon.remain) + ' / ' + str(var.bag.weapon.clip)

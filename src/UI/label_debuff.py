@@ -8,9 +8,9 @@ class LabelDebuffName(Label):
 
     def update(self):
         if var.player.debuff is not None:
-            self.text = 'Debuff: ' + var.player.debuff.name
+            self.text = 'Speed:   ' + var.player.debuff.name
         else:
-            self.text = 'Debuff: ' + 'None'
+            self.text = 'Speed:   ' + 'Normal'
 
 
 class LabelDebuffTime(Label):
@@ -19,6 +19,6 @@ class LabelDebuffTime(Label):
 
     def update(self):
         if var.player.debuff is not None:
-            self.text = 'Time: ' + str(var.player.debuff.time) + ' ticks'
+            self.text = 'Time:     ' + str(var.player.debuff.time) + ' ticks'
         else:
             self.text = ''

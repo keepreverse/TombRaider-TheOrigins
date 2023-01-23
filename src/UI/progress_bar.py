@@ -9,7 +9,7 @@ Set the progress to adjust the bar.
 
 class ProgressBar(Component):
     def __init__(self, center, size, length,
-                 border_color=(255, 255, 255), inactive_color=(100, 100, 100), active_color=(255, 255, 255)):
+                 border_color=(255, 255, 255), inactive_color=(60, 60, 60), active_color=(255, 255, 255)):
         super().__init__(center)
         self.rect.size = size
         self.rect.center = center

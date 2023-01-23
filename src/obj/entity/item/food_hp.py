@@ -6,7 +6,7 @@ It can't be used when player is in full health.
 """
 
 
-class Food(Collectible):
+class FoodHP(Collectible):
     def __init__(self, name, image, amount, recover_health):
         super().__init__(name, image, True, amount)
         self.recover_health = recover_health

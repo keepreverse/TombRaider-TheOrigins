@@ -16,14 +16,14 @@ The player, use keyboard and mouse to control.
 class Player(Creature):
     def __init__(self, pos):
         super().__init__(Rect(pos[0] * TILE_SIZE[0], pos[1] * TILE_SIZE[1], 24, 10),
-                         AnimationSystem(**const.ANIMATION_REPOSITORY.animations['player']), 3.5, 10, 0, 0)
+                         AnimationSystem(**const.ANIMATION_REPOSITORY.animations['player']), 3.2, 10, 0, 0)
         self.rect.center = self.rect.left_top + Vector(TILE_SIZE[0] / 2, TILE_SIZE[1] / 2)
         # The corresponding key is pressing
         self.__w, self.__s, self.__a, self.__d,  self.__r, self.__v, self.__space = False, False, False, False, False, False, False
         # Mouse left key.
         self.__b1 = False
         
-        self.shoot_glock18 = pygame.mixer.Sound('data/music/glock18.mp3')
+        self.shoot_deagle = pygame.mixer.Sound('data/music/deagle.mp3')
         self.shoot_ump = pygame.mixer.Sound('data/music/ump.mp3')
         self.shoot_sawedoff = pygame.mixer.Sound('data/music/sawedoff.mp3')
         self.shoot_ak47 = pygame.mixer.Sound('data/music/ak47.mp3')
@@ -122,16 +122,16 @@ class Player(Creature):
         if self.__space or self.__b1:
             shooting_bullet = var.bag.weapon.shoot(self.rect.center, self.shoot_dir, self)
             if shooting_bullet is not None:
-                if var.bag.weapon.name == "Glock 18":
-                    self.shoot_glock18.play().set_volume(0.1)
+                if var.bag.weapon.name == "Desert Eagle":
+                    self.shoot_deagle.play().set_volume(0.35)
                 elif var.bag.weapon.name == "HK UMP":
                     self.shoot_ump.play().set_volume(0.2)
                 elif var.bag.weapon.name == "Sawed Off":
                     self.shoot_sawedoff.play().set_volume(0.1)
                 elif var.bag.weapon.name == "AK-47":
-                    self.shoot_ak47.play().set_volume(0.2)
+                    self.shoot_ak47.play().set_volume(0.08)
                 elif var.bag.weapon.name == "AWP":
-                    self.shoot_awp.play().set_volume(0.12)
+                    self.shoot_awp.play().set_volume(0.15)
                 var.map.active_room.entities.append(shooting_bullet)
 
 

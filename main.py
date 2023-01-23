@@ -14,7 +14,7 @@ The entry of the program
 if __name__ == '__main__':
     # pygame initialization
     pygame.init()
-    pygame.display.set_caption('Tomb Raider: Old Times')
+    pygame.display.set_caption('Tomb Raider: The Origins')
     # Initialize the screen
     var.screen = pygame.display.set_mode(const.SCREEN_SIZE)
     # Initialize const file, include the music, image and animation

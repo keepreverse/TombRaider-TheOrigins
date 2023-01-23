@@ -2,13 +2,13 @@ import const
 from src.obj.entity.item.weapon import Weapon
 
 
-class Glock18(Weapon):
+class Deagle(Weapon):
     def __init__(self):
-        super().__init__("Glock 18", const.IMAGE['weapon'][0], 7, 4.8, 17, 100)
+        super().__init__("Desert Eagle", const.IMAGE['weapon'][0], 7, 50, 7, 90)
 
     @property
     def information(self):
-        return '    Glock 18. My grandma sent me when i 8 years old, it has 8 points of damage.'
+        return '    Desert Eagle. pistol sometimes called a mini rifle, it has 7 points of damage.'
 
 
 class HKUMP(Weapon):
@@ -17,25 +17,25 @@ class HKUMP(Weapon):
 
     @property
     def information(self):
-        return '    Heckler & Koch UMP. my girlfriend sent me when i 19 years old, it has 10 points of damage.'
+        return '    Heckler & Koch UMP. fast but not so powerful SMG, it has 8 points of damage.'
 
 
 class SawedOff(Weapon):
     def __init__(self):
-        super().__init__("Sawed Off", const.IMAGE['weapon'][2], 12, 70, 8, 130)
+        super().__init__("Sawed Off", const.IMAGE['weapon'][2], 11, 70, 8, 130)
 
     @property
     def information(self):
-        return '    Sawed Off. my dad sent me when i 25 years old, it has 12 points of damage.'
+        return '    Sawed Off. shotgun that can make anyone quiet in a second, it has 12 points of damage.'
 
 
 class AK47(Weapon):
     def __init__(self):
-        super().__init__("AK-47", const.IMAGE['weapon'][3], 8, 11, 30, 120)
+        super().__init__("AK-47", const.IMAGE['weapon'][3], 9, 7, 30, 120)
 
     @property
     def information(self):
-        return '    AK-47. durable and glamorous, it has 10 points of damage.'
+        return '    AK-47. soviet assault rifle, durable and glamorous, it has 9 points of damage.'
 
 
 class AWP(Weapon):
@@ -44,4 +44,4 @@ class AWP(Weapon):
 
     @property
     def information(self):
-        return '    Arctic Warfare Police,  the best sniper rifle in the world, it has 20 points of damage.'
+        return '    Arctic Warfare Police. the best sniper rifle in the world, it has 20 points of damage.'

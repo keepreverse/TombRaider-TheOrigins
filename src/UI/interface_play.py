@@ -5,17 +5,21 @@ from src.UI.image_map import ImageMap
 from src.UI.interface import Interface
 from src.UI.label_bullet import LabelBullet
 from src.UI.label_hp import LabelHP
-from src.UI.label_reloading import LabelReloading
+from src.UI.label_hp_bar import LabelHPBar
+from src.UI.label_bullet_bar import LabelBulletBar
 from src.UI.progress_bar_bullet import ProgressBarBullet
 from src.UI.progress_bar_hp import ProgressBarHP
+from src.UI.label_debuff import LabelDebuffName, LabelDebuffTime
+
 """
 Control the map.
 """
 
 class PLAY(Interface):
     def __init__(self):
-        super().__init__(ImageMap((SCREEN_SIZE[0]/1.1, SCREEN_SIZE[1]/5)), LabelHP((20, 50)), ProgressBarHP((110, 48)),
-                         LabelBullet((20, 80)), ProgressBarBullet((140, 78)), LabelReloading((140, 80)))
+        super().__init__(ImageMap((SCREEN_SIZE[0]/1.15, SCREEN_SIZE[1]/5)), LabelHP((20, 50)), ProgressBarHP((147, 48)), LabelHPBar((147, 50)),
+                         LabelBullet((20, 80)), ProgressBarBullet((147, 78)), LabelBulletBar((147, 80)),
+                         LabelDebuffName((20, 110)), LabelDebuffTime((20, 140)))
 
     def update(self):
         var.map.update()

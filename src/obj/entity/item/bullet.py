@@ -11,8 +11,7 @@ class Bullet(Collectible):
 
     @property
     def information(self):
-        return '    They are just some bullets, but without them you can\'t shoot anymore, so please take a good ' \
-               'use of it. '
+        return '    You won\'t be able to shoot without them, so please aim better so you don\'t waste them all.'
     
     def use(self):
         return

@@ -8,4 +8,4 @@ class LabelHP(Label):
 
     def update(self):
         if var.player is not None:
-            self.text = 'HP: ' + str(var.player.health) + ' / ' + str(var.player.max_health)
+            self.text = 'Health:  ' + str(var.player.health) + ' / ' + str(var.player.max_health)

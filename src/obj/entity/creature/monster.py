@@ -4,10 +4,11 @@ from src.tool.vector import Vector
 from src.obj.entity.creature.creature import Creature
 from src.obj.entity.item.collectible import Collectible
 from src.obj.entity.item.shooting_bullet import ShootingBullet
-from src.obj.entity.item.weapons import Glock18, HKUMP, SawedOff, AK47
-from src.obj.entity.item.armor5_15 import Armor7, Armor9, Armor11, Armor13
+from src.obj.entity.item.weapons import Deagle, HKUMP, SawedOff, AK47
+from src.obj.entity.item.armors import ArmorPolice, ArmorTiger, ArmorSapphire, ArmorSandstorm
 from src.obj.entity.item.bullet import Bullet
-from src.obj.entity.item.potion import Potion
+from src.obj.entity.item.potion_hp import PotionHP
+from src.obj.entity.item.potion_buff import PotionBuff
 from src.obj.entity.item.treasure import Treasure
 """
 It will attack the player.
@@ -19,13 +20,15 @@ class Monster(Creature):
     def __init__(self, rect, animation_system, speed_mag, max_health, defense, damage, *collectibles):
         super().__init__(rect, animation_system, speed_mag, max_health, defense, damage)
         self.__collectibles = [*collectibles]
-        # Add the drop bullet and potion
+        # Add the drop bullet and potion_hp
         self.__collectibles.append(Bullet(random.randint(2, 3) * 8))
         if random.randint(0, 1) == 0:
-            self.__collectibles.append(Potion())
+            self.__collectibles.append(PotionHP())
+        if random.randint(0, 5) == 0:
+            self.__collectibles.append(PotionBuff())
         # Add the drop weapon
         if random.randint(0, 4) == 0:
-            self.__collectibles.append(Glock18())
+            self.__collectibles.append(Deagle())
         elif random.randint(0, 4) == 0:
             self.__collectibles.append(HKUMP())
         elif random.randint(0, 6) == 0:
@@ -34,13 +37,13 @@ class Monster(Creature):
             self.__collectibles.append(AK47())
         # Add the drop armor
         if random.randint(0, 4) == 0:
-            self.__collectibles.append(Armor7())
+            self.__collectibles.append(ArmorPolice())
         elif random.randint(0, 4) == 0:
-            self.__collectibles.append(Armor9())
+            self.__collectibles.append(ArmorTiger())
         elif random.randint(0, 6) == 0:
-            self.__collectibles.append(Armor11())
+            self.__collectibles.append(ArmorSapphire())
         elif random.randint(0, 8) == 0:
-            self.__collectibles.append(Armor13())
+            self.__collectibles.append(ArmorSandstorm())
         # Add the treasure
         elif random.randint(0, 50) == 0:
             self.__collectibles.append(Treasure())

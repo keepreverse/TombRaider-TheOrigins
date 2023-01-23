@@ -4,7 +4,8 @@ from const import IMAGE
 from src.obj.building.trigger_building import TriggerBuilding
 from src.tool.vector import Vector
 from src.obj.entity.item.bullet import Bullet
-from src.obj.entity.item.potion import Potion
+from src.obj.entity.item.potion_hp import PotionHP
+from src.obj.entity.item.potion_buff import PotionBuff
 from src.obj.entity.item.key import Key
 """
 Chest with ammo, heal and key(s)
@@ -16,9 +17,10 @@ class ChestSupply(TriggerBuilding):
         super().__init__(pos, IMAGE['chest'][4], (0, 0), False, False, IMAGE['chest'][5], (0, 0))
         self.__collectibles = [*collectibles]
         self.__collectibles = [*collectibles]
-        # Add the drop bullet and potion
+        # Add the drop bullet and potion_hp
         self.__collectibles.append(Bullet(random.randint(2, 3) * 10))
-        self.__collectibles.append(Potion(random.randint(1, 3)))
+        self.__collectibles.append(PotionHP(random.randint(1, 3)))
+        self.__collectibles.append(PotionBuff(random.randint(1, 3)))
         self.__collectibles.append(Key(random.randint(1, 2)))
     @property
     def collectibles(self):

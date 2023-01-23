@@ -4,7 +4,7 @@ from const import IMAGE
 from src.obj.building.trigger_building import TriggerBuilding
 from src.tool.vector import Vector
 from src.obj.entity.item.weapons import SawedOff, AK47, AWP
-from src.obj.entity.item.armor5_15 import Armor11, Armor13, Armor15
+from src.obj.entity.item.armors import ArmorSapphire, ArmorSandstorm, ArmorAbsolute
 from src.obj.entity.item.bullet import Bullet
 """
 Chest with the best armor/weapon
@@ -17,11 +17,11 @@ class ChestMaze(TriggerBuilding):
         self.__collectibles = [*collectibles]
         if random.randint(0, 2) == 0:
             if random.randint(0, 3) == 0:
-                self.__collectibles.append(Armor11())
+                self.__collectibles.append(ArmorSapphire())
             elif random.randint(0, 2) == 0:
-                self.__collectibles.append(Armor13())
+                self.__collectibles.append(ArmorSandstorm())
             else:
-                self.__collectibles.append(Armor15())
+                self.__collectibles.append(ArmorAbsolute())
         else:
             if random.randint(0, 3) == 0:
                 self.__collectibles.append(AK47())

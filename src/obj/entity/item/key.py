@@ -11,8 +11,7 @@ class Key(Collectible):
 
     @property
     def information(self):
-        return '    Look at this golden key, it must be expensive. But there has more valuable treasure in this maze, '\
-                'and the only way to open the door is to use this key. It\'s not reusable thought.'
+        return '    The only way to open the door is to use this key. Remember that it can\'t be reused.'
                 
     def use(self):
         return
