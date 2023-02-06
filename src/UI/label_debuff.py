@@ -19,6 +19,6 @@ class LabelDebuffTime(Label):
 
     def update(self):
         if var.player.debuff != None:
-            self.text = 'Time:     ' + str(('%.3f' % (var.player.debuff.time/60))) + ' secs'
+            self.text = 'Time:     ' + str(('%.2f' % (var.player.debuff.time/60))) + ' secs'
         else:
             self.text = ''

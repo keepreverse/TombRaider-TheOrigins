@@ -14,7 +14,7 @@ TILE_SIZE = (35, 35)
 # The room consist of 20 * 20 tiles on width and height.
 ROOM_SIZE = (int(SCREEN_SIZE[0]/60) - 1, int(SCREEN_SIZE[0]/60) - 2)
 # The map consist of maximum 6 * 6 room on width and height.
-MAP_SIZE = (6, 6)
+MAP_SIZE = (4, 4)
 FPS = 60
 MAX_ENEMY = 10
 MIN_ENEMY = 1
@@ -68,12 +68,10 @@ class Init:
         else:
             IMAGE[name] = [self.load("data/image/%s/%d.png" % (name, i)).convert() for i in range(number)]
  
- 
-# pygame initialization
-pygame.init()
-pygame.display.set_caption('Tomb Raider: The Origins')
+
 # Initialize the screen
 var.screen = pygame.display.set_mode(SCREEN_SIZE)
+
 init = Init()
 init.init_obj('ground', 8)
 init.init_obj('wall', 6, is_alpha=True)
@@ -92,5 +90,5 @@ init.init_creature(IMAGE, LEGAL_STATE, "player", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "guard", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "mummy", 2)
 init.init_creature(IMAGE, LEGAL_STATE, "pharaoh", 2)
-Init.init_music(SOUND, "menu", 0.1)
+Init.init_music(SOUND, "menu", 0.08)
 ANIMATION_REPOSITORY = AnimationRepository()

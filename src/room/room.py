@@ -93,12 +93,12 @@ class Room:
             pos = (random.randint(0, ROOM_SIZE[0] - 1), random.randint(0, ROOM_SIZE[1] - 1))
             if not isinstance(self.buildings[pos[0]][pos[1]], Ground):
                 continue
-            _ = random.randint(1, 3)
-            if _ == 1:
+            have_key = random.randint(1, 3)
+            if have_key == 1:
                 self.entities.append(Guard(pos))
-            elif _ == 2:
+            elif have_key == 2:
                 self.entities.append(Mummy(pos))
-            elif _ == 3:
+            elif have_key == 3:
                 self.entities.append(Pharaoh(pos))
             cnt += 1
         self.entities[random.randint(0, var.enemies_number - 1)].collectibles.append(Key())

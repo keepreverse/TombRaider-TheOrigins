@@ -25,4 +25,4 @@ class Trap(TriggerBuilding):
         if entity != var.player or self.image != const.IMAGE['trap'][3]:
             return
         var.player.take_damage(2)
-        var.player.debuff = DebuffSlow(240, var.player, -2)
+        var.player.debuff = DebuffSlow(180, var.player, -2)

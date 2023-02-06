@@ -56,14 +56,6 @@ class PAUSE(Interface):
         self.__button = [Image((SCREEN_SIZE[0] - SCREEN_SIZE[0]/6, SCREEN_SIZE[1] - SCREEN_SIZE[1]/4), const.IMAGE['pause'][5]),
                          ButtonContinue((1520, 750)), ButtonTitle((1680, 800)), ButtonRestart((1520, 850))]
 
-        #self.__profile[0].image.fill((30, 30, 30))
-        # self.__equipment[0].image.fill((200, 200, 200))
-        # self.__bag[0].image.fill((100, 100, 100))
-        # self.__information[0].image.fill((30, 30, 30))
-        # self.__map[0].image.fill((60, 60, 60))
-        # self.__map[1].image.fill((140, 140, 140))
-        # self.__button[0].image.fill((55, 55, 55))
-
         self.__surface = Surface(SCREEN_SIZE)
         self.__update_list = [self.__profile, self.__equipment, self.__bag, self.__information, self.__map, self.__button]
 

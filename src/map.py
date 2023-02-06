@@ -59,8 +59,8 @@ class Map:
         self.__end_room_pos = None
         end_rooms = []
         dire = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+        
         # Use dfs to create the whole map.
-
         def dfs(now, prev, graph, cnt_room, depth):
             if now[0] < 0 or now[0] >= MAP_SIZE[0] or \
                     now[1] < 0 or now[1] >= MAP_SIZE[1]:
@@ -104,7 +104,7 @@ class Map:
                 if len(self.__graph[i][j]) != 0:
                     # Entry room
                     if (i, j) == self.__entry_room_pos:
-                        self.__map[i][j] = RoomSupply()
+                        self.__map[i][j] = RoomEmpty()
                     # End room
                     elif (i, j) in end_rooms:
                         self.__map[i][j] = RoomTreasure()
@@ -176,14 +176,16 @@ class Map:
         """
         surface_size = 200, 200
         x, y = surface_size[0] / (MAP_SIZE[0] + 1), surface_size[1] / (MAP_SIZE[1] + 1)
+
         if full_map:
             pos_list = [(i, j) for i in range(MAP_SIZE[0]) for j in range(MAP_SIZE[1]) if len(self.__graph[i][j]) != 0]
+            starter = pos_list
         else:
             pos_list = self.__discover_set
         for pos in pos_list:
             left, top = (pos[0] + 2/3)*x, (pos[1] + 2/3)*y
             width, height = 2/3*x, 2/3*y
-            pygame.draw.rect(self.__surface, (255, 255, 255), (round(left), round(top), round(width), round(height)))
+            pygame.draw.rect(self.__surface, (200, 200, 200), (round(left), round(top), round(width), round(height)))
             dire = [(0, -1), (0, 1), (-1, 0), (1, 0)]
             for d in dire:
                 nxt = pos[0] + d[0], pos[1] + d[1]
@@ -191,10 +193,10 @@ class Map:
                     le, to = round(left + (1/6 + 1/2*d[0])*x), round(top + (1/6 + 1/2*d[1])*y)
                     wi, he = round(1/3*x), round(1/3*y)
                     if pos in self.__discover_set and nxt in self.__discover_set:
-                        pygame.draw.rect(self.__surface, (100, 255, 255), (le, to, wi, he))
+                        pygame.draw.rect(self.__surface, (40, 200, 40), (le, to, wi, he))
                     else:
-                        pygame.draw.rect(self.__surface, (255, 255, 0), (le, to, wi, he))
+                        pygame.draw.rect(self.__surface, (200, 40, 40), (le, to, wi, he))
         left, top = round((self.__active_room_pos[0] + 2/3) * x), round((self.__active_room_pos[1] + 2/3) * y)
         width, height = round(2/3*x), round(2/3*y)
-        pygame.draw.rect(self.__surface, (255, 0, 0), (left, top, width, height))
+        pygame.draw.rect(self.__surface, (110, 255, 110), (left, top, width, height))
         return self.__surface

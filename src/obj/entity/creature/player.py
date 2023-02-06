@@ -127,11 +127,11 @@ class Player(Creature):
                 elif var.bag.weapon.name == "HK UMP":
                     self.shoot_ump.play().set_volume(0.2)
                 elif var.bag.weapon.name == "Sawed Off":
-                    self.shoot_sawedoff.play().set_volume(0.1)
+                    self.shoot_sawedoff.play().set_volume(0.04)
                 elif var.bag.weapon.name == "AK-47":
                     self.shoot_ak47.play().set_volume(0.08)
                 elif var.bag.weapon.name == "AWP":
-                    self.shoot_awp.play().set_volume(0.15)
+                    self.shoot_awp.play().set_volume(0.1)
                 var.map.active_room.entities.append(shooting_bullet)
 
 
