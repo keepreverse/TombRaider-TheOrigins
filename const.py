@@ -14,7 +14,7 @@ TILE_SIZE = (35, 35)
 # The room consist of 20 * 20 tiles on width and height.
 ROOM_SIZE = (int(SCREEN_SIZE[0]/60) - 1, int(SCREEN_SIZE[0]/60) - 2)
 # The map consist of maximum 6 * 6 room on width and height.
-MAP_SIZE = (4, 4)
+MAP_SIZE = (5, 5)
 FPS = 60
 MAX_ENEMY = 10
 MIN_ENEMY = 1

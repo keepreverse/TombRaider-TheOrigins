@@ -10,6 +10,10 @@ from src.UI.label_bullet_bar import LabelBulletBar
 from src.UI.progress_bar_bullet import ProgressBarBullet
 from src.UI.progress_bar_hp import ProgressBarHP
 from src.UI.label_debuff import LabelDebuffName, LabelDebuffTime
+from src.UI.interface_pause import PAUSE
+from src.UI.interface_death import DEATH
+
+
 
 """
 Control the map.
@@ -27,10 +31,10 @@ class PLAY(Interface):
         for event in var.key_down:
             if event.key == pygame.K_ESCAPE:
                 var.player.refresh()
-                var.interface = var.pause
+                var.interface = var.pause = PAUSE()
                 var.pause.refresh()
         if var.player.is_dead:
-            var.interface = var.death
+            var.interface = var.death = DEATH()
 
     def draw(self, surface):
         var.map.active_room.draw(surface)

@@ -1,6 +1,6 @@
 """
-Хранит переменные, которые не являются постоянными.
-Этот файл не должен включать какой-либо класс.
+Store the variable which are not constant.
+This file should not import any class.
 """
 # Event list
 key_up = []

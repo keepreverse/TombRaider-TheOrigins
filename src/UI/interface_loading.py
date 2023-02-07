@@ -1,6 +1,5 @@
 import var
 from const import ROOM_SIZE, SCREEN_SIZE
-from src.UI.interface_pause import PAUSE
 from src.UI.progress_bar import ProgressBar
 from src.UI.interface import Interface
 from src.UI.label import Label
@@ -31,7 +30,6 @@ class LOADING(Interface):
             var.map.active_room.entities.append(var.player)
         elif self.__cnt == 5:
             var.interface = var.play
-            var.pause = PAUSE()
         if self.__cnt == 5:
             self.__cnt = -1
         else:

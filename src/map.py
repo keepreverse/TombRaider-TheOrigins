@@ -198,5 +198,5 @@ class Map:
                         pygame.draw.rect(self.__surface, (200, 40, 40), (le, to, wi, he))
         left, top = round((self.__active_room_pos[0] + 2/3) * x), round((self.__active_room_pos[1] + 2/3) * y)
         width, height = round(2/3*x), round(2/3*y)
-        pygame.draw.rect(self.__surface, (110, 255, 110), (left, top, width, height))
+        pygame.draw.rect(self.__surface, (250, 210, 90), (left, top, width, height))
         return self.__surface

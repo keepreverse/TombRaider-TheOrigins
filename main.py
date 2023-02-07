@@ -17,8 +17,6 @@ if __name__ == '__main__':
     # Initialize the START and PLAY interface and set START as the active interface
     var.interface = var.start = START()
     var.play = PLAY()
-    var.death = DEATH()
-    var.end = END()
 
     # Use to maintain the FPS
     clock = pygame.time.Clock()
