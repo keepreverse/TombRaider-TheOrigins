@@ -21,10 +21,10 @@ class LOADING(Interface):
             self.components[0].text = "Creating the player backpack."
             var.player = Player((ROOM_SIZE[0] // 2, 3))
         elif self.__cnt == 2:
-            self.components[0].text = "Creating the maze."
+            self.components[0].text = "Loading the map."
             var.bag = Bag()
         elif self.__cnt == 3:
-            self.components[0].text = "Put the player into the maze."
+            self.components[0].text = "Put the player into the location."
             var.map = Map()
         elif self.__cnt == 4:
             self.components[0].text = "Done."

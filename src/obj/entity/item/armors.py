@@ -34,7 +34,7 @@ class ArmorTiger(Armor):
 
 class ArmorSapphire(Armor):
     def __init__(self):
-        super().__init__('Sapphire vest', const.IMAGE['armor'][3], 22)
+        super().__init__('Sapphire vest', const.IMAGE['armor'][3], 10)
 
     @property
     def information(self):
@@ -43,7 +43,7 @@ class ArmorSapphire(Armor):
 
 class ArmorSandstorm(Armor):
     def __init__(self):
-        super().__init__('Sandstorm vest', const.IMAGE['armor'][4], 44)
+        super().__init__('Sandstorm vest', const.IMAGE['armor'][4], 12)
 
     @property
     def information(self):
