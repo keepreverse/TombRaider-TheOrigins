@@ -17,7 +17,7 @@ class Bag:
         self.__items = [Bullet(67), Key(3), PotionHP(3), PotionBuff(2)]
         self.__has_bullet = True
         self.__has_key = True
-        self.__has_treasure = True
+        self.__has_treasure = False
         self.active_item_id = 0
         # Initial weapon the armor.
         self.weapon = Deagle()
