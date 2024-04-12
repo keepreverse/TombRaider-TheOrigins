@@ -19,4 +19,5 @@ class ButtonPlay(Button):
     def on_click(self):
         self.image = self.images[1]
         var.interface = var.loading = LOADING()
-        Init.init_music(SOUND, "game", 0.15)
+        Init.init_music(SOUND, "game", 0.12)
+        

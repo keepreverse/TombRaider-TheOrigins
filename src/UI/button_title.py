@@ -8,7 +8,7 @@ class ButtonTitle(CustomButton):
 
     def on_click(self):
         var.interface = var.start
-        Init.init_music(SOUND, "menu", 0.08)
+        Init.init_music(SOUND, "game", 0.08)
 
     def on_hover(self):
         self.image = self.images[1]
